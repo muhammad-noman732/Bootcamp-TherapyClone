@@ -1,0 +1,105 @@
+{
+  "type": "SharedSlice",
+  "id": "split_about_content",
+  "name": "SplitAboutContent",
+  "variations": [
+    {
+      "id": "default_layout",
+      "name": "Default Layout",
+      "description": "Central heading with optional icon, surrounded by two rows of side-by-side image and text blocks, typically used for story/mission or values.",
+      "version": "initial",
+      "imageUrl": "",
+      "docURL": "...",
+      "primary": {
+        "icon": {
+          "type": "Image",
+          "config": {
+            "constraint": {},
+            "label": "Icon (optional)"
+          }
+        },
+        "heading": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Section Heading",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "heading2"
+          }
+        },
+        "image_top_left": {
+          "type": "Image",
+          "config": {
+            "label": "image_top_left",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "imagetopright": {
+          "type": "Image",
+          "config": {
+            "label": "ImageTopRight",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "imagebottomleft": {
+          "type": "Image",
+          "config": {
+            "label": "ImageBottomLeft",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "imagebottomright": {
+          "type": "Image",
+          "config": {
+            "label": "ImageBottomRight",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "textblocks": {
+          "type": "Group",
+          "config": {
+            "label": "TextBlocks",
+            "repeat": true,
+            "fields": {
+              "title": {
+                "type": "Text",
+                "config": {
+                  "label": "Title",
+                  "placeholder": ""
+                }
+              },
+              "description": {
+                "type": "Text",
+                "config": {
+                  "label": "description",
+                  "placeholder": ""
+                }
+              }
+            }
+          }
+        },
+        "story_bullet_points": {
+          "type": "Group",
+          "config": {
+            "label": "Story_bullet_points",
+            "repeat": true,
+            "fields": {
+              "bullet_item": {
+                "type": "Text",
+                "config": {
+                  "label": "Bullet_item",
+                  "placeholder": ""
+                }
+              }
+            }
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

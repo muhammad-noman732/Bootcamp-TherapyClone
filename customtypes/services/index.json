@@ -1,0 +1,76 @@
+{
+  "format": "page",
+  "id": "services",
+  "label": "Services",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {
+            "cta_centered": {
+              "type": "SharedSlice"
+            },
+            "media_grid_highlight": {
+              "type": "SharedSlice"
+            },
+            "appointment_form": {
+              "type": "SharedSlice"
+            },
+            "faq_list": {
+              "type": "SharedSlice"
+            },
+            "info_grid": {
+              "type": "SharedSlice"
+            },
+            "icon_list": {
+              "type": "SharedSlice"
+            },
+            "approach_overview": {
+              "type": "SharedSlice"
+            },
+            "informational_features": {
+              "type": "SharedSlice"
+            },
+            "feature_list_image": {
+              "type": "SharedSlice"
+            },
+            "hero_with_bg_image": {
+              "type": "SharedSlice"
+            }
+          }
+        }
+      }
+    },
+    "SEO & Metadata": {
+      "meta_title": {
+        "config": {
+          "label": "Meta Title",
+          "placeholder": "A title of the page used for social media and search engines"
+        },
+        "type": "Text"
+      },
+      "meta_description": {
+        "config": {
+          "label": "Meta Description",
+          "placeholder": "A brief summary of the page"
+        },
+        "type": "Text"
+      },
+      "meta_image": {
+        "config": {
+          "constraint": {
+            "height": 1260,
+            "width": 2400
+          },
+          "label": "Meta Image",
+          "thumbnails": []
+        },
+        "type": "Image"
+      }
+    }
+  }
+}

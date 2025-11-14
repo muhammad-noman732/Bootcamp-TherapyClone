@@ -1,0 +1,69 @@
+{
+  "type": "SharedSlice",
+  "id": "image_form_split",
+  "name": "ImageFormSplit",
+  "variations": [
+    {
+      "id": "image_left_form_right",
+      "name": "Image Left, Form Right",
+      "description": "Displays an image on the left and a form on the right for user input.",
+      "version": "initial",
+      "imageUrl": "",
+      "docURL": "...",
+      "primary": {
+        "side_image": {
+          "type": "Image",
+          "config": {
+            "label": "Side Image"
+          }
+        },
+        "form_title": {
+          "type": "Text",
+          "config": {
+            "label": "Form Title"
+          }
+        },
+        "form_fields": {
+          "type": "Group",
+          "config": {
+            "label": "Form Fields",
+            "fields": {
+              "field_type": {
+                "type": "Select",
+                "config": {
+                  "label": "Field Type",
+                  "options": [
+                    "text",
+                    "email",
+                    "phone",
+                    "textarea"
+                  ]
+                }
+              },
+              "field_label": {
+                "type": "Text",
+                "config": {
+                  "label": "Field Label"
+                }
+              },
+              "is_required": {
+                "type": "Boolean",
+                "config": {
+                  "label": "Required"
+                }
+              }
+            }
+          }
+        },
+        "submit_button": {
+          "type": "Text",
+          "config": {
+            "label": "Submit Button",
+            "placeholder": ""
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

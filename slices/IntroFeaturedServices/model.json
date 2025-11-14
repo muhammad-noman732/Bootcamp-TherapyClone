@@ -1,0 +1,93 @@
+{
+  "type": "SharedSlice",
+  "id": "intro_featured_services",
+  "name": "IntroFeaturedServices",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "description": "Displays an image, heading, description, multi-column feature tags with icons or bullets, a main button, a thematic headline, and a responsive set of service cards with icons/titles/descriptions.",
+      "version": "initial",
+      "imageUrl": "",
+      "docURL": "...",
+      "primary": {
+        "main_image": {
+          "type": "Image",
+          "config": {
+            "label": "Main Image"
+          }
+        },
+        "heading": {
+          "type": "StructuredText",
+          "config": {
+            "single": "heading1",
+            "label": "Heading"
+          }
+        },
+        "description": {
+          "type": "StructuredText",
+          "config": {
+            "multi": "paragraph,strong,em,hyperlink",
+            "label": "Description"
+          }
+        },
+        "features": {
+          "type": "Group",
+          "config": {
+            "label": "Feature Tags",
+            "fields": {
+              "label": {
+                "type": "Text",
+                "config": {
+                  "label": "Label"
+                }
+              }
+            }
+          }
+        },
+        "primary_cta": {
+          "type": "Link",
+          "config": {
+            "label": "Primary Button",
+            "allowText": true,
+            "repeat": false,
+            "select": null
+          }
+        },
+        "section_headline": {
+          "type": "StructuredText",
+          "config": {
+            "single": "heading2",
+            "label": "Section Headline"
+          }
+        },
+        "services": {
+          "type": "Group",
+          "config": {
+            "label": "Service Cards",
+            "fields": {
+              "icon": {
+                "type": "Image",
+                "config": {
+                  "label": "Icon"
+                }
+              },
+              "title": {
+                "type": "Text",
+                "config": {
+                  "label": "Title"
+                }
+              },
+              "description": {
+                "type": "Text",
+                "config": {
+                  "label": "Description"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

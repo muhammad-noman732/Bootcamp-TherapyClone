@@ -1,0 +1,94 @@
+{
+  "type": "SharedSlice",
+  "id": "information_with_image_grid",
+  "name": "InformationWithImageGrid",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "description": "Informational content with headings, lists, and image grid; suitable for education or service explanation pages.",
+      "version": "initial",
+      "imageUrl": "",
+      "docURL": "...",
+      "primary": {
+        "intro_text": {
+          "type": "StructuredText",
+          "config": {
+            "multi": "paragraph,strong,em,hyperlink",
+            "label": "Introductory Text"
+          }
+        },
+        "purpose_title": {
+          "type": "StructuredText",
+          "config": {
+            "single": "heading3",
+            "label": "Purpose Title"
+          }
+        },
+        "purpose_list": {
+          "type": "StructuredText",
+          "config": {
+            "multi": "paragraph,list-item",
+            "label": "Purpose List"
+          }
+        },
+        "purpose_extra": {
+          "type": "StructuredText",
+          "config": {
+            "multi": "paragraph,strong,em,hyperlink",
+            "label": "Purpose Supporting Text"
+          }
+        },
+        "approaches_title": {
+          "type": "StructuredText",
+          "config": {
+            "single": "heading3",
+            "label": "Approaches Title"
+          }
+        },
+        "approaches_list": {
+          "type": "StructuredText",
+          "config": {
+            "multi": "paragraph,list-item",
+            "label": "Approaches List"
+          }
+        },
+        "result_title": {
+          "type": "StructuredText",
+          "config": {
+            "single": "heading3",
+            "label": "Result Title"
+          }
+        },
+        "result_text": {
+          "type": "StructuredText",
+          "config": {
+            "multi": "paragraph,strong,em,hyperlink",
+            "label": "Result Supporting Text"
+          }
+        },
+        "result_steps": {
+          "type": "StructuredText",
+          "config": {
+            "multi": "paragraph,list-item",
+            "label": "Result Steps List"
+          }
+        },
+        "images": {
+          "type": "Group",
+          "config": {
+            "label": "Image Grid",
+            "fields": {
+              "image": {
+                "type": "Image",
+                "config": {
+                  "label": "Image"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "type": "SharedSlice",
+  "id": "image_text_columns",
+  "name": "ImageTextColumns",
+  "variations": [
+    {
+      "id": "image_left_text_right",
+      "name": "Image Left, Text Right",
+      "description": "Displays an image on the left and corresponding text content on the right, suitable for interview or testimonial layouts.",
+      "version": "initial",
+      "imageUrl": "",
+      "docURL": "...",
+      "primary": {
+        "main_image": {
+          "type": "Image",
+          "config": {
+            "label": "Main Image"
+          }
+        },
+        "heading": {
+          "type": "StructuredText",
+          "config": {
+            "single": "heading2",
+            "label": "Heading"
+          }
+        },
+        "description": {
+          "type": "StructuredText",
+          "config": {
+            "multi": "paragraph,strong,em,hyperlink",
+            "label": "Description"
+          }
+        },
+        "button_link": {
+          "type": "Link",
+          "config": {
+            "label": "Button Link",
+            "placeholder": "",
+            "select": null,
+            "allowTargetBlank": true,
+            "allowText": true,
+            "repeat": false
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"title": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "heading2",
+						"content": {
+							"text": "Thank"
+						}
+					}
+				]
+			},
+			"items": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"item_title",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "mostly",
+									"type": "Text"
+								}
+							],
+							[
+								"item_description",
+								{
+									"__TYPE__": "StructuredTextContent",
+									"value": [
+										{
+											"type": "paragraph",
+											"content": {
+												"text": "Sunt ex pariatur deserunt. Officia officia ullamco consequat culpa Lorem ipsum irure cillum reprehenderit nostrud eu reprehenderit id dolore. Cillum dolore excepteur nostrud duis commodo qui esse officia."
+											}
+										}
+									]
+								}
+							]
+						]
+					}
+				]
+			},
+			"subheading": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "heading3",
+						"content": {
+							"text": "Shoot"
+						}
+					}
+				]
+			}
+		},
+		"items": []
+	}
+]

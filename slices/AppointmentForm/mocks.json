@@ -1,0 +1,69 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"title": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "heading1",
+						"content": {
+							"text": "Brass"
+						}
+					}
+				]
+			},
+			"description": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Fugiat mollit aute ut. Laboris ad commodo excepteur proident cupidatat deserunt ex tempor nulla id duis qui ea cillum."
+						}
+					}
+				]
+			},
+			"form_fields": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"field_label",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "possibly",
+									"type": "Text"
+								}
+							],
+							[
+								"field_type",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "email",
+									"type": "Select"
+								}
+							],
+							[
+								"is_required",
+								{
+									"__TYPE__": "BooleanContent",
+									"value": false
+								}
+							]
+						]
+					}
+				]
+			},
+			"submit_label": {
+				"__TYPE__": "FieldContent",
+				"value": "spent",
+				"type": "Text"
+			}
+		},
+		"items": []
+	}
+]

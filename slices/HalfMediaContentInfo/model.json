@@ -1,0 +1,66 @@
+{
+  "type": "SharedSlice",
+  "id": "half_media_content_info",
+  "name": "HalfMediaContentInfo",
+  "variations": [
+    {
+      "id": "image_left_content_right",
+      "name": "Image Left, Content Right",
+      "description": "Media is displayed on the left, and structured content (headings, description, details, contact info) on the right. Useful for visually balancing imagery and key information.",
+      "version": "initial",
+      "imageUrl": "",
+      "docURL": "...",
+      "primary": {
+        "media": {
+          "type": "Image",
+          "config": {
+            "label": "Media (Image/Video)"
+          }
+        },
+        "pretitle": {
+          "type": "StructuredText",
+          "config": {
+            "single": "paragraph",
+            "label": "Pretitle"
+          }
+        },
+        "title": {
+          "type": "StructuredText",
+          "config": {
+            "single": "heading1,strong,em",
+            "label": "Title"
+          }
+        },
+        "subtitle": {
+          "type": "StructuredText",
+          "config": {
+            "single": "heading3,strong,em",
+            "label": "Subtitle"
+          }
+        },
+        "info_blocks": {
+          "type": "Group",
+          "config": {
+            "label": "Info Blocks",
+            "fields": {
+              "block_title": {
+                "type": "StructuredText",
+                "config": {
+                  "single": "heading4",
+                  "label": "Block Title"
+                }
+              },
+              "block_content": {
+                "type": "StructuredText",
+                "config": {
+                  "multi": "paragraph,strong,em,hyperlink",
+                  "label": "Block Content"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

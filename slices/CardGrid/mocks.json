@@ -1,0 +1,109 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "with_pagination",
+		"primary": {
+			"cards": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"image",
+								{
+									"__TYPE__": "ImageContent",
+									"origin": {
+										"id": "main",
+										"url": "https://images.unsplash.com/photo-1537498425277-c283d32ef9db",
+										"width": 4380,
+										"height": 2895
+									},
+									"url": "https://images.unsplash.com/photo-1537498425277-c283d32ef9db",
+									"width": 4380,
+									"height": 2895,
+									"edit": {
+										"zoom": 1,
+										"crop": {
+											"x": 0,
+											"y": 0
+										},
+										"background": "transparent"
+									},
+									"alt": "is"
+								}
+							],
+							[
+								"tag",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "composed",
+									"type": "Text"
+								}
+							],
+							[
+								"date",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "hunter",
+									"type": "Text"
+								}
+							],
+							[
+								"title",
+								{
+									"__TYPE__": "StructuredTextContent",
+									"value": [
+										{
+											"type": "heading3",
+											"content": {
+												"text": "Sense"
+											}
+										}
+									]
+								}
+							],
+							[
+								"description",
+								{
+									"__TYPE__": "StructuredTextContent",
+									"value": [
+										{
+											"type": "paragraph",
+											"content": {
+												"text": "Nostrud fugiat amet ad velit eiusmod nisi consectetur. Esse consequat mollit anim culpa incididunt. Excepteur do id anim commodo laboris ad aute cupidatat duis velit ad velit minim."
+											}
+										}
+									]
+								}
+							]
+						]
+					}
+				]
+			},
+			"current_page": {
+				"__TYPE__": "FieldContent",
+				"value": "93",
+				"type": "Number"
+			},
+			"total_pages": {
+				"__TYPE__": "FieldContent",
+				"value": "35",
+				"type": "Number"
+			},
+			"show_pagination": {
+				"__TYPE__": "BooleanContent",
+				"value": true
+			},
+			"next_page_link": {
+				"__TYPE__": "LinkContent",
+				"key": "275f29db-e82b-4b9b-aa43-b508bcad2d33",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "https://slicemachine.dev"
+				}
+			}
+		},
+		"items": []
+	}
+]

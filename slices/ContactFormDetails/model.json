@@ -1,0 +1,142 @@
+{
+  "type": "SharedSlice",
+  "id": "contact_form_details",
+  "name": "ContactFormDetails",
+  "variations": [
+    {
+      "id": "form_with_sidebar_info",
+      "name": "Form with Sidebar Info",
+      "description": "Variation that presents a contact form alongside business details and an optional FAQ callout.",
+      "version": "initial",
+      "imageUrl": "",
+      "docURL": "...",
+      "primary": {
+        "heading": {
+          "type": "StructuredText",
+          "config": {
+            "single": "heading1",
+            "label": "Heading"
+          }
+        },
+        "form_fields": {
+          "type": "Group",
+          "config": {
+            "label": "Form Fields",
+            "fields": {
+              "input_label": {
+                "type": "Text",
+                "config": {
+                  "label": "Input Label"
+                }
+              },
+              "input_type": {
+                "type": "Select",
+                "config": {
+                  "label": "Input Type",
+                  "options": [
+                    "text",
+                    "email",
+                    "textarea",
+                    "select",
+                    "tel"
+                  ]
+                }
+              },
+              "is_required": {
+                "type": "Boolean",
+                "config": {
+                  "label": "Is Required"
+                }
+              }
+            }
+          }
+        },
+        "submit_label": {
+          "type": "Text",
+          "config": {
+            "label": "Submit Button Label"
+          }
+        },
+        "opening_hours_title": {
+          "type": "StructuredText",
+          "config": {
+            "single": "heading4",
+            "label": "Opening Hours Title"
+          }
+        },
+        "opening_hours": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Opening Hours",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph"
+          }
+        },
+        "contact_title": {
+          "type": "StructuredText",
+          "config": {
+            "single": "heading4",
+            "label": "Contact Title"
+          }
+        },
+        "phone_number": {
+          "type": "Text",
+          "config": {
+            "label": "Phone Number"
+          }
+        },
+        "email_address": {
+          "type": "Text",
+          "config": {
+            "label": "Email Address"
+          }
+        },
+        "address_title": {
+          "type": "StructuredText",
+          "config": {
+            "single": "heading4",
+            "label": "Address Title"
+          }
+        },
+        "address": {
+          "type": "StructuredText",
+          "config": {
+            "multi": "paragraph",
+            "label": "Address"
+          }
+        },
+        "show_faq_callout": {
+          "type": "Boolean",
+          "config": {
+            "label": "Show FAQ Callout"
+          }
+        },
+        "faq_callout_text": {
+          "type": "StructuredText",
+          "config": {
+            "single": "paragraph,strong",
+            "label": "FAQ Callout Text"
+          }
+        },
+        "faq_callout_link": {
+          "type": "Link",
+          "config": {
+            "label": "FAQ Callout Link",
+            "allowText": false,
+            "repeat": false,
+            "select": null
+          }
+        },
+        "top_heading": {
+          "type": "Text",
+          "config": {
+            "label": "Top Heading",
+            "placeholder": ""
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

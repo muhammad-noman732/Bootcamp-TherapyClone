@@ -1,0 +1,40 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "centered_simple",
+		"primary": {
+			"title": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "heading2",
+						"content": {
+							"text": "Income"
+						}
+					}
+				]
+			},
+			"description": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Ullamco nisi aute incididunt nostrud ut Lorem nisi in ullamco."
+						}
+					}
+				]
+			},
+			"primary_button": {
+				"__TYPE__": "LinkContent",
+				"key": "041e3ff5-46d8-44fa-854e-3a6220afdd13",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "http://google.com",
+					"text": "handle"
+				}
+			}
+		},
+		"items": []
+	}
+]

@@ -1,0 +1,63 @@
+{
+  "type": "SharedSlice",
+  "id": "info_with_images_grid",
+  "name": "InfoWithImagesGrid",
+  "variations": [
+    {
+      "id": "informational_with_image_gallery",
+      "name": "Informational with Image Gallery",
+      "description": "Features rich, sectioned informational content on the left and a multi-image grid or collage on the right/below for illustrative purposes.",
+      "version": "initial",
+      "imageUrl": "",
+      "docURL": "...",
+      "primary": {
+        "sections": {
+          "type": "Group",
+          "config": {
+            "label": "Sections",
+            "fields": {
+              "section_title": {
+                "type": "StructuredText",
+                "config": {
+                  "single": "heading2",
+                  "label": "Section Title"
+                }
+              },
+              "section_content": {
+                "type": "StructuredText",
+                "config": {
+                  "label": "Section Content",
+                  "placeholder": "",
+                  "allowTargetBlank": true,
+                  "multi": "paragraph,strong,em,hyperlink,list-item,o-list-item"
+                }
+              }
+            }
+          }
+        },
+        "images": {
+          "type": "Group",
+          "config": {
+            "label": "Images",
+            "fields": {
+              "image": {
+                "type": "Image",
+                "config": {
+                  "label": "Image"
+                }
+              }
+            }
+          }
+        },
+        "introtext": {
+          "type": "Text",
+          "config": {
+            "label": "IntroText",
+            "placeholder": ""
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

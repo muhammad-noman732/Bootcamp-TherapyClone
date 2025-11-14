@@ -1,0 +1,73 @@
+{
+  "format": "page",
+  "id": "homepage",
+  "label": "HomePage",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {
+            "cta_centered": {
+              "type": "SharedSlice"
+            },
+            "team_showcase": {
+              "type": "SharedSlice"
+            },
+            "featured_article_with_list": {
+              "type": "SharedSlice"
+            },
+            "contact_form_details": {
+              "type": "SharedSlice"
+            },
+            "testimonial_carousel": {
+              "type": "SharedSlice"
+            },
+            "logo_bar": {
+              "type": "SharedSlice"
+            },
+            "media_grid_highlight": {
+              "type": "SharedSlice"
+            },
+            "intro_featured_services": {
+              "type": "SharedSlice"
+            },
+            "hero_with_overlay": {
+              "type": "SharedSlice"
+            }
+          }
+        }
+      }
+    },
+    "SEO & Metadata": {
+      "meta_title": {
+        "config": {
+          "label": "Meta Title",
+          "placeholder": "A title of the page used for social media and search engines"
+        },
+        "type": "Text"
+      },
+      "meta_description": {
+        "config": {
+          "label": "Meta Description",
+          "placeholder": "A brief summary of the page"
+        },
+        "type": "Text"
+      },
+      "meta_image": {
+        "config": {
+          "constraint": {
+            "height": 1260,
+            "width": 2400
+          },
+          "label": "Meta Image",
+          "thumbnails": []
+        },
+        "type": "Image"
+      }
+    }
+  }
+}

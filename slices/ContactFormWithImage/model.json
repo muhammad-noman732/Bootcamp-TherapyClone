@@ -1,0 +1,60 @@
+{
+  "type": "SharedSlice",
+  "id": "contact_form_with_image",
+  "name": "ContactFormWithImage",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "description": "Layout with contact form fields (name, email, phone, message) and a submit button, positioned next to an image. Useful for contact or inquiry sections.",
+      "version": "initial",
+      "imageUrl": "",
+      "docURL": "...",
+      "primary": {
+        "side_image": {
+          "type": "Image",
+          "config": {
+            "label": "Side Image"
+          }
+        },
+        "first_name_label": {
+          "type": "Text",
+          "config": {
+            "label": "First Name Field Label"
+          }
+        },
+        "last_name_label": {
+          "type": "Text",
+          "config": {
+            "label": "Last Name Field Label"
+          }
+        },
+        "email_label": {
+          "type": "Text",
+          "config": {
+            "label": "Email Field Label"
+          }
+        },
+        "phone_label": {
+          "type": "Text",
+          "config": {
+            "label": "Phone Field Label"
+          }
+        },
+        "message_label": {
+          "type": "Text",
+          "config": {
+            "label": "Message Field Label"
+          }
+        },
+        "submit_button_text": {
+          "type": "Text",
+          "config": {
+            "label": "Submit Button Text"
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

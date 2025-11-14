@@ -1,0 +1,100 @@
+{
+  "type": "SharedSlice",
+  "id": "two_column_text_image_info",
+  "name": "TwoColumnTextImageInfo",
+  "variations": [
+    {
+      "id": "text_image_with_contact_details",
+      "name": "Text & Image with Info Blocks",
+      "description": "Features a large image on the left and text content on the right, including styled heading, rich text, opening hours, contact details, and address groupings.",
+      "version": "initial",
+      "imageUrl": "",
+      "docURL": "...",
+      "primary": {
+        "main_image": {
+          "type": "Image",
+          "config": {
+            "label": "Main Image"
+          }
+        },
+        "eyebrow": {
+          "type": "StructuredText",
+          "config": {
+            "single": "paragraph",
+            "label": "Eyebrow"
+          }
+        },
+        "heading": {
+          "type": "StructuredText",
+          "config": {
+            "single": "heading1,strong,em",
+            "label": "Title"
+          }
+        },
+        "highlighted_text": {
+          "type": "StructuredText",
+          "config": {
+            "single": "heading2,em",
+            "label": "Highlighted Text"
+          }
+        },
+        "openinghourstitle": {
+          "type": "StructuredText",
+          "config": {
+            "label": "OpeningHoursTitle",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "heading3"
+          }
+        },
+        "opening_hours": {
+          "type": "Text",
+          "config": {
+            "label": "Opening Hours",
+            "placeholder": ""
+          }
+        },
+        "contact": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Contact",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "heading3"
+          }
+        },
+        "phone_number": {
+          "type": "Text",
+          "config": {
+            "label": "Phone Number",
+            "placeholder": ""
+          }
+        },
+        "email_address": {
+          "type": "Text",
+          "config": {
+            "label": "Email Address",
+            "placeholder": ""
+          }
+        },
+        "address": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Address",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "heading3"
+          }
+        },
+        "address_text": {
+          "type": "Text",
+          "config": {
+            "label": "Address Text",
+            "placeholder": ""
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

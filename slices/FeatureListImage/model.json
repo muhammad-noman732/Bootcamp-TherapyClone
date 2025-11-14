@@ -1,0 +1,51 @@
+{
+  "type": "SharedSlice",
+  "id": "feature_list_image",
+  "name": "FeatureListImage",
+  "variations": [
+    {
+      "id": "side_image",
+      "name": "Side Image",
+      "description": "Displays the heading, description, and list aligned to the left, with an image on the right.",
+      "version": "initial",
+      "imageUrl": "",
+      "docURL": "...",
+      "primary": {
+        "section_heading": {
+          "type": "StructuredText",
+          "config": {
+            "single": "heading2",
+            "label": "Section Heading"
+          }
+        },
+        "section_description": {
+          "type": "StructuredText",
+          "config": {
+            "multi": "paragraph,strong,em,hyperlink",
+            "label": "Section Description"
+          }
+        },
+        "items": {
+          "type": "Group",
+          "config": {
+            "label": "Items",
+            "fields": {
+              "label": {
+                "type": "Text",
+                "config": {
+                  "label": "Label"
+                }
+              }
+            }
+          }
+        },
+        "side_image": {
+          "type": "Image",
+          "config": {
+            "label": "Side Image"
+          }
+        }
+      }
+    }
+  ]
+}

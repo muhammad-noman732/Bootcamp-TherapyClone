@@ -1,0 +1,72 @@
+{
+  "type": "SharedSlice",
+  "id": "appointment_form",
+  "name": "AppointmentForm",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "description": "Standard appointment form with customizable heading, description, and user-input fields.",
+      "version": "initial",
+      "imageUrl": "",
+      "docURL": "...",
+      "primary": {
+        "title": {
+          "type": "StructuredText",
+          "config": {
+            "single": "heading1",
+            "label": "Title"
+          }
+        },
+        "description": {
+          "type": "StructuredText",
+          "config": {
+            "multi": "paragraph",
+            "label": "Description"
+          }
+        },
+        "form_fields": {
+          "type": "Group",
+          "config": {
+            "label": "Form Fields",
+            "fields": {
+              "field_label": {
+                "type": "Text",
+                "config": {
+                  "label": "Field Label"
+                }
+              },
+              "field_type": {
+                "type": "Select",
+                "config": {
+                  "label": "Field Type",
+                  "options": [
+                    "text",
+                    "email",
+                    "phone",
+                    "date",
+                    "time",
+                    "textarea",
+                    "select"
+                  ]
+                }
+              },
+              "is_required": {
+                "type": "Boolean",
+                "config": {
+                  "label": "Required"
+                }
+              }
+            }
+          }
+        },
+        "submit_label": {
+          "type": "Text",
+          "config": {
+            "label": "Submit Button Label"
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "type": "SharedSlice",
+  "id": "hero_cta",
+  "name": "HeroCta",
+  "variations": [
+    {
+      "id": "centered_text_with_background_and_single_cta",
+      "name": "Centered Text with Background & Single CTA",
+      "description": "All content is centered over a background (image or video), includes a main headline, optional subheadline, and a single prominent call-to-action button.",
+      "version": "initial",
+      "imageUrl": "",
+      "docURL": "...",
+      "primary": {
+        "background_media": {
+          "type": "Image",
+          "config": {
+            "label": "Background Media"
+          }
+        },
+        "headline": {
+          "type": "StructuredText",
+          "config": {
+            "single": "heading1",
+            "label": "Headline"
+          }
+        },
+        "subheadline": {
+          "type": "StructuredText",
+          "config": {
+            "single": "paragraph,strong,em,hyperlink",
+            "label": "Subheadline"
+          }
+        },
+        "primary_cta": {
+          "type": "Link",
+          "config": {
+            "label": "Primary Call to Action",
+            "allowText": true,
+            "repeat": false,
+            "select": null
+          }
+        }
+      }
+    }
+  ]
+}

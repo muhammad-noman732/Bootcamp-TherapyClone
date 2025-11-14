@@ -1,0 +1,39 @@
+{
+  "type": "SharedSlice",
+  "id": "two_column_layout",
+  "name": "TwoColumnLayout",
+  "variations": [
+    {
+      "id": "image_text_side_by_side",
+      "name": "Image & Text Side by Side",
+      "description": "One column for images (e.g., people, objects), the other for text or structured content (e.g., notes, summaries). Tailored for layouts where visual context and written content support each other directly.",
+      "version": "initial",
+      "imageUrl": "",
+      "docURL": "...",
+      "primary": {
+        "columns": {
+          "type": "Group",
+          "config": {
+            "label": "Columns",
+            "fields": {
+              "column_image": {
+                "type": "Image",
+                "config": {
+                  "label": "Column Image"
+                }
+              },
+              "column_content": {
+                "type": "StructuredText",
+                "config": {
+                  "multi": "paragraph,strong,em,hyperlink",
+                  "label": "Column Content"
+                }
+              }
+            }
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

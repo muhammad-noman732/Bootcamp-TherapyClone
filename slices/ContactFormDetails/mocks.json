@@ -1,0 +1,151 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "form_with_sidebar_info",
+		"primary": {
+			"heading": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "heading1",
+						"content": {
+							"text": "Review"
+						}
+					}
+				]
+			},
+			"form_fields": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"input_label",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "claws",
+									"type": "Text"
+								}
+							],
+							[
+								"input_type",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "textarea",
+									"type": "Select"
+								}
+							],
+							[
+								"is_required",
+								{
+									"__TYPE__": "BooleanContent",
+									"value": true
+								}
+							]
+						]
+					}
+				]
+			},
+			"submit_label": {
+				"__TYPE__": "FieldContent",
+				"value": "here",
+				"type": "Text"
+			},
+			"opening_hours_title": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "heading4",
+						"content": {
+							"text": "Recently"
+						}
+					}
+				]
+			},
+			"opening_hours": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Deserunt nisi adipisicing deserunt aliqua aute fugiat exercitation aliqua quis fugiat. Aute minim deserunt incididunt elit non sit nostrud consequat. Nisi veniam ut est magna ea fugiat do tempor."
+						}
+					}
+				]
+			},
+			"contact_title": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "heading4",
+						"content": {
+							"text": "Anyone"
+						}
+					}
+				]
+			},
+			"phone_number": {
+				"__TYPE__": "FieldContent",
+				"value": "value",
+				"type": "Text"
+			},
+			"email_address": {
+				"__TYPE__": "FieldContent",
+				"value": "hunter",
+				"type": "Text"
+			},
+			"address_title": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "heading4",
+						"content": {
+							"text": "Captured"
+						}
+					}
+				]
+			},
+			"address": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Proident ex ullamco laboris voluptate ut officia anim fugiat. Cillum exercitation ut ad labore est mollit ipsum. Nisi esse fugiat mollit ipsum ipsum sunt."
+						}
+					}
+				]
+			},
+			"show_faq_callout": {
+				"__TYPE__": "BooleanContent",
+				"value": true
+			},
+			"faq_callout_text": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Laborum ipsum mollit velit fugiat ipsum nostrud magna."
+						}
+					}
+				]
+			},
+			"faq_callout_link": {
+				"key": "c9d8fcfa-d8ac-4109-b66c-d378cabf43f6",
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "https://slicemachine.dev"
+				}
+			},
+			"top_heading": {
+				"__TYPE__": "FieldContent",
+				"value": "today",
+				"type": "Text"
+			}
+		},
+		"items": []
+	}
+]

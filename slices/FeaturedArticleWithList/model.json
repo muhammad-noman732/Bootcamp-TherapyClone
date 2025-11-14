@@ -1,0 +1,84 @@
+{
+  "type": "SharedSlice",
+  "id": "featured_article_with_list",
+  "name": "FeaturedArticleWithList",
+  "variations": [
+    {
+      "id": "main_feature",
+      "name": "Main Feature with Side List",
+      "description": "A layout with one prominent article alongside a vertical list of related or recent articles, each containing metadata and title.",
+      "version": "initial",
+      "imageUrl": "",
+      "docURL": "...",
+      "primary": {
+        "featured_article": {
+          "type": "Group",
+          "config": {
+            "label": "Featured Article",
+            "fields": {
+              "image": {
+                "type": "Image",
+                "config": {
+                  "label": "Image"
+                }
+              },
+              "category": {
+                "type": "Text",
+                "config": {
+                  "label": "Category"
+                }
+              },
+              "date": {
+                "type": "Date",
+                "config": {
+                  "label": "Date"
+                }
+              },
+              "title": {
+                "type": "StructuredText",
+                "config": {
+                  "single": "paragraph",
+                  "label": "Title"
+                }
+              }
+            }
+          }
+        },
+        "article_list": {
+          "type": "Group",
+          "config": {
+            "label": "Article List",
+            "fields": {
+              "category": {
+                "type": "Text",
+                "config": {
+                  "label": "Category"
+                }
+              },
+              "date": {
+                "type": "Date",
+                "config": {
+                  "label": "Date"
+                }
+              },
+              "title": {
+                "type": "StructuredText",
+                "config": {
+                  "single": "paragraph",
+                  "label": "Title"
+                }
+              },
+              "description": {
+                "type": "StructuredText",
+                "config": {
+                  "multi": "paragraph",
+                  "label": "Description"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

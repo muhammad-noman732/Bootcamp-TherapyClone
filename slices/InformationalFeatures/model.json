@@ -1,0 +1,58 @@
+{
+  "type": "SharedSlice",
+  "id": "informational_features",
+  "name": "InformationalFeatures",
+  "variations": [
+    {
+      "id": "image_left_features_grid",
+      "name": "Image Left, Features Grid",
+      "description": "Section with an image on the left and a heading with multiple feature items (each with title and description) in a grid or separated format to the right.",
+      "version": "initial",
+      "imageUrl": "",
+      "docURL": "...",
+      "primary": {
+        "main_image": {
+          "type": "Image",
+          "config": {
+            "label": "Main Image"
+          }
+        },
+        "section_heading": {
+          "type": "StructuredText",
+          "config": {
+            "single": "heading2",
+            "label": "Section Heading"
+          }
+        },
+        "section_subheading": {
+          "type": "StructuredText",
+          "config": {
+            "single": "heading3",
+            "label": "Section Subheading"
+          }
+        },
+        "features": {
+          "type": "Group",
+          "config": {
+            "label": "Features",
+            "fields": {
+              "title": {
+                "type": "Text",
+                "config": {
+                  "label": "Title"
+                }
+              },
+              "description": {
+                "type": "StructuredText",
+                "config": {
+                  "multi": "paragraph,strong,em",
+                  "label": "Description"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

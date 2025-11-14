@@ -1,0 +1,82 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-geist-mono);
+  --font-poppin: var(--font-poppin);
+  --font-italiana: var(--font-italiana);
+  --font-inria-serif: var(--font-inria-serif);
+  --font-hurricane:var(--font-hurricane)
+}
+
+body {
+  background: transparent;
+  color: var(--foreground);
+  overflow-x: hidden;
+}
+
+/* --- Hide Scrollbars Utility --- */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* ------------------------------------------------------------------ */
+/* 🎨 CUSTOM COLORS + UTILITIES                                        */
+/* ------------------------------------------------------------------ */
+
+/* ✅ 1. Horizontal Orange Glow Gradient (Used for the main section background) */
+.bg-form-gradient {
+  background: linear-gradient(
+    90deg,
+    rgba(246, 120, 79, 0) 0%,
+    rgba(246, 120, 79, 0.1) 13%,
+    rgba(246, 120, 79, 0.3) 25%,
+    rgba(246, 120, 79, 0.4) 38%,
+    rgba(246, 120, 79, 0.5) 50%,
+    rgba(246, 120, 79, 0.4) 63%,
+    rgba(250, 186, 165, 0.3) 75%,
+    rgba(246, 120, 79, 0.1) 88%,
+    rgba(246, 120, 79, 0) 100%
+  );
+}
+
+/* 2. Vertical Form Card Gradient (The specific gradient requested for the form background) */
+.bg-form-top-gradient {
+    background: linear-gradient(180deg, #F6784F 0%, #FFFFFF 100%);
+}
+
+/* 3. Light Peach Background for "Details" Blocks */
+.bg-details-peach {
+  background-color: #f5e4de;
+}
+
+/* 4. Deep Slate/Teal Background for "FAQ" Section */
+.bg-faq-dark {
+  background-color: #2d484e;
+}
+
+/* 5. Soft Yellow Background for "Submit" Button */
+.bg-submit-yellow {
+  background-color: #f0e5af;
+}
+
+/* 6. Text Colors for Headings and Body */
+.text-slate-800 {
+  color: #2c3e50; /* dark slate */
+}
+
+.text-slate-700 {
+  color: #4a6568; /* lighter slate */
+}

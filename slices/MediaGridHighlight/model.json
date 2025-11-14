@@ -1,0 +1,65 @@
+{
+  "type": "SharedSlice",
+  "id": "media_grid_highlight",
+  "name": "MediaGridHighlight",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "description": "Displays a section title, a flexible media grid (images or videos with optional captions), and a visually distinct call-to-action link typically styled as circular or decorative.",
+      "version": "initial",
+      "imageUrl": "",
+      "docURL": "...",
+      "primary": {
+        "title": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Title",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "heading1"
+          }
+        },
+        "media_items": {
+          "type": "Group",
+          "config": {
+            "label": "Media Items",
+            "fields": {
+              "media": {
+                "type": "Image",
+                "config": {
+                  "label": "Image"
+                }
+              },
+              "alt_text": {
+                "type": "Text",
+                "config": {
+                  "label": "Alternative Text"
+                }
+              }
+            }
+          }
+        },
+        "cta_link": {
+          "type": "Link",
+          "config": {
+            "label": "Call to Action Link",
+            "placeholder": "",
+            "allowText": true,
+            "repeat": false,
+            "select": null
+          }
+        },
+        "ctalinkimage": {
+          "type": "Image",
+          "config": {
+            "label": "CtaLinkImage",
+            "constraint": {},
+            "thumbnails": []
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

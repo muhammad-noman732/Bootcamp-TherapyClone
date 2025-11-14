@@ -1,0 +1,55 @@
+{
+  "type": "SharedSlice",
+  "id": "info_grid",
+  "name": "InfoGrid",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "description": "Standard heading with flexible grid items, each containing a title and description.",
+      "version": "initial",
+      "imageUrl": "",
+      "docURL": "...",
+      "primary": {
+        "title": {
+          "type": "StructuredText",
+          "config": {
+            "single": "heading2",
+            "label": "Title"
+          }
+        },
+        "items": {
+          "type": "Group",
+          "config": {
+            "label": "Items",
+            "fields": {
+              "item_title": {
+                "type": "Text",
+                "config": {
+                  "label": "Item Title"
+                }
+              },
+              "item_description": {
+                "type": "StructuredText",
+                "config": {
+                  "multi": "paragraph,strong,em",
+                  "label": "Item Description"
+                }
+              }
+            }
+          }
+        },
+        "subheading": {
+          "type": "StructuredText",
+          "config": {
+            "label": "SubHeading",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "heading3"
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

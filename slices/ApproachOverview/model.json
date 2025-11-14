@@ -1,0 +1,70 @@
+{
+  "type": "SharedSlice",
+  "id": "approach_overview",
+  "name": "ApproachOverview",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "description": "Standard layout with heading, intro text, bulleted outcomes/steps, and accompanying image.",
+      "version": "initial",
+      "imageUrl": "",
+      "docURL": "...",
+      "primary": {
+        "intro_title": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Intro Title",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "heading2"
+          }
+        },
+        "intro_description": {
+          "type": "StructuredText",
+          "config": {
+            "multi": "paragraph,strong,em,hyperlink",
+            "label": "Intro Description"
+          }
+        },
+        "side_image": {
+          "type": "Image",
+          "config": {
+            "label": "Side Image"
+          }
+        },
+        "expectation_items": {
+          "type": "Group",
+          "config": {
+            "label": "What to Expect Items",
+            "fields": {
+              "item_number": {
+                "type": "Number",
+                "config": {
+                  "label": "Item Number"
+                }
+              },
+              "item_text": {
+                "type": "StructuredText",
+                "config": {
+                  "multi": "paragraph,strong,em",
+                  "label": "Item Text"
+                }
+              }
+            }
+          }
+        },
+        "subheading": {
+          "type": "StructuredText",
+          "config": {
+            "label": "SubHeading",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "heading4"
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

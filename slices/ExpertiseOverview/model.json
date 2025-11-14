@@ -1,0 +1,86 @@
+{
+  "type": "SharedSlice",
+  "id": "expertise_overview",
+  "name": "ExpertiseOverview",
+  "variations": [
+    {
+      "id": "with_image_and_services",
+      "name": "With Image and Services",
+      "description": "Displays a main title, a list of expertise/services with icons (some on left, some on right), a central image, and descriptive text with a primary call-to-action.",
+      "version": "initial",
+      "imageUrl": "",
+      "docURL": "...",
+      "primary": {
+        "title": {
+          "type": "StructuredText",
+          "config": {
+            "single": "heading2",
+            "label": "Title"
+          }
+        },
+        "center_image": {
+          "type": "Image",
+          "config": {
+            "label": "Central Image"
+          }
+        },
+        "services_left": {
+          "type": "Group",
+          "config": {
+            "label": "Services Left",
+            "fields": {
+              "icon": {
+                "type": "Image",
+                "config": {
+                  "label": "Service Icon"
+                }
+              },
+              "title": {
+                "type": "Text",
+                "config": {
+                  "label": "Service Title"
+                }
+              }
+            }
+          }
+        },
+        "services_right": {
+          "type": "Group",
+          "config": {
+            "label": "Services Right",
+            "fields": {
+              "icon": {
+                "type": "Image",
+                "config": {
+                  "label": "Service Icon"
+                }
+              },
+              "title": {
+                "type": "Text",
+                "config": {
+                  "label": "Service Title"
+                }
+              }
+            }
+          }
+        },
+        "description": {
+          "type": "StructuredText",
+          "config": {
+            "multi": "paragraph,strong,em,hyperlink",
+            "label": "Description"
+          }
+        },
+        "primary_cta": {
+          "type": "Link",
+          "config": {
+            "label": "Primary CTA",
+            "allowText": true,
+            "repeat": false,
+            "select": null
+          }
+        }
+      }
+    }
+  ]
+}

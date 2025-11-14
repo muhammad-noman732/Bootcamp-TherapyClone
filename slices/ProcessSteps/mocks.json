@@ -1,0 +1,60 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"section_title": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "heading2",
+						"content": {
+							"text": "Invented"
+						}
+					}
+				]
+			},
+			"steps": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"step_number",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "distance",
+									"type": "Text"
+								}
+							],
+							[
+								"step_title",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "fourth",
+									"type": "Text"
+								}
+							],
+							[
+								"step_description",
+								{
+									"__TYPE__": "StructuredTextContent",
+									"value": [
+										{
+											"type": "paragraph",
+											"content": {
+												"text": "Enim velit minim cupidatat eu cillum ullamco."
+											}
+										}
+									]
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		"items": []
+	}
+]

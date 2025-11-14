@@ -1,0 +1,57 @@
+{
+  "type": "SharedSlice",
+  "id": "feature_case_study",
+  "name": "FeatureCaseStudy",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "description": "Displays all core elements including headline, subheadline, image, and a four-column meta information grid.",
+      "version": "initial",
+      "imageUrl": "",
+      "docURL": "...",
+      "primary": {
+        "title": {
+          "type": "StructuredText",
+          "config": {
+            "single": "heading1",
+            "label": "Title"
+          }
+        },
+        "subtitle": {
+          "type": "StructuredText",
+          "config": {
+            "single": "paragraph",
+            "label": "Subtitle"
+          }
+        },
+        "main_image": {
+          "type": "Image",
+          "config": {
+            "label": "Main Image"
+          }
+        },
+        "meta_info": {
+          "type": "Group",
+          "config": {
+            "label": "Meta Information",
+            "fields": {
+              "label": {
+                "type": "Text",
+                "config": {
+                  "label": "Label"
+                }
+              },
+              "value": {
+                "type": "Text",
+                "config": {
+                  "label": "Value"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

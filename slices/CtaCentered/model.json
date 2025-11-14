@@ -1,0 +1,40 @@
+{
+  "type": "SharedSlice",
+  "id": "cta_centered",
+  "name": "CtaCentered",
+  "variations": [
+    {
+      "id": "centered_simple",
+      "name": "Centered Simple",
+      "description": "Centered layout with a main heading, short description, and single call-to-action button.",
+      "version": "initial",
+      "imageUrl": "",
+      "docURL": "...",
+      "primary": {
+        "title": {
+          "type": "StructuredText",
+          "config": {
+            "single": "heading2",
+            "label": "Title"
+          }
+        },
+        "description": {
+          "type": "StructuredText",
+          "config": {
+            "multi": "paragraph,strong,em,hyperlink",
+            "label": "Description"
+          }
+        },
+        "primary_button": {
+          "type": "Link",
+          "config": {
+            "label": "Primary Button",
+            "allowText": true,
+            "repeat": false,
+            "select": null
+          }
+        }
+      }
+    }
+  ]
+}

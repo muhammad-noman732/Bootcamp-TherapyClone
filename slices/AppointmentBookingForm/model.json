@@ -1,0 +1,71 @@
+{
+  "type": "SharedSlice",
+  "id": "appointment_booking_form",
+  "name": "AppointmentBookingForm",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "description": "Standard appointment booking form with title, description, and various input fields.",
+      "version": "initial",
+      "imageUrl": "",
+      "docURL": "...",
+      "primary": {
+        "title": {
+          "type": "StructuredText",
+          "config": {
+            "single": "heading1,strong,em",
+            "label": "Title"
+          }
+        },
+        "description": {
+          "type": "StructuredText",
+          "config": {
+            "multi": "paragraph,strong,em",
+            "label": "Description"
+          }
+        },
+        "form_fields": {
+          "type": "Group",
+          "config": {
+            "label": "Form Fields",
+            "fields": {
+              "field_label": {
+                "type": "Text",
+                "config": {
+                  "label": "Field Label"
+                }
+              },
+              "field_type": {
+                "type": "Select",
+                "config": {
+                  "label": "Field Type",
+                  "options": [
+                    "text",
+                    "email",
+                    "phone",
+                    "date",
+                    "time",
+                    "textarea"
+                  ]
+                }
+              },
+              "is_required": {
+                "type": "Boolean",
+                "config": {
+                  "label": "Required Field"
+                }
+              }
+            }
+          }
+        },
+        "submit_button_label": {
+          "type": "Text",
+          "config": {
+            "label": "Submit Button Label"
+          }
+        }
+      }
+    }
+  ]
+}

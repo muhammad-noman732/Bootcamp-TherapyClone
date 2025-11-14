@@ -1,0 +1,45 @@
+{
+  "type": "SharedSlice",
+  "id": "faq_list",
+  "name": "FaqList",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "description": "Standard FAQ section with a title and repeatable FAQ items; answers can be revealed on expansion.",
+      "version": "initial",
+      "imageUrl": "",
+      "docURL": "...",
+      "primary": {
+        "title": {
+          "type": "StructuredText",
+          "config": {
+            "single": "heading2",
+            "label": "Title"
+          }
+        },
+        "faqs": {
+          "type": "Group",
+          "config": {
+            "label": "FAQs",
+            "fields": {
+              "question": {
+                "type": "Text",
+                "config": {
+                  "label": "Question"
+                }
+              },
+              "answer": {
+                "type": "StructuredText",
+                "config": {
+                  "multi": "paragraph,strong,em,hyperlink",
+                  "label": "Answer"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

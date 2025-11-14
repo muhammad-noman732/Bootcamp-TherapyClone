@@ -1,0 +1,51 @@
+{
+  "type": "SharedSlice",
+  "id": "hero_with_overlay",
+  "name": "HeroWithOverlay",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "description": "Hero section with background image, prominent heading, subheading, brief description, and a set of social/media links.",
+      "version": "initial",
+      "imageUrl": "",
+      "docURL": "...",
+      "primary": {
+        "media": {
+          "type": "Image",
+          "config": {
+            "label": "Background Media"
+          }
+        },
+        "subtitle": {
+          "type": "StructuredText",
+          "config": {
+            "single": "heading2",
+            "label": "Subtitle"
+          }
+        },
+        "title": {
+          "type": "StructuredText",
+          "config": {
+            "single": "heading1",
+            "label": "Main Title"
+          }
+        },
+        "description": {
+          "type": "StructuredText",
+          "config": {
+            "multi": "paragraph,strong,em,hyperlink",
+            "label": "Description"
+          }
+        },
+        "follow_label": {
+          "type": "Text",
+          "config": {
+            "label": "Follow Label"
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

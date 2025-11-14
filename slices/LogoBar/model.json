@@ -1,0 +1,44 @@
+{
+  "type": "SharedSlice",
+  "id": "logo_bar",
+  "name": "LogoBar",
+  "variations": [
+    {
+      "id": "as_seen_on_logos",
+      "name": "As Seen On Logos",
+      "description": "Displays a set of logos with or without a bolded 'AS SEEN ON' headline for credibility/social proof.",
+      "version": "initial",
+      "imageUrl": "",
+      "docURL": "...",
+      "primary": {
+        "headline": {
+          "type": "StructuredText",
+          "config": {
+            "single": "heading2",
+            "label": "Headline"
+          }
+        },
+        "logos": {
+          "type": "Group",
+          "config": {
+            "label": "Logos",
+            "fields": {
+              "logo_image": {
+                "type": "Image",
+                "config": {
+                  "label": "Logo Image"
+                }
+              },
+              "alt_text": {
+                "type": "Text",
+                "config": {
+                  "label": "Alt Text"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

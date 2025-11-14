@@ -1,0 +1,24 @@
+{
+  "type": "SharedSlice",
+  "id": "page_header",
+  "name": "PageHeader",
+  "variations": [
+    {
+      "id": "title_centered",
+      "name": "Title Centered",
+      "description": "Displays a single, large, centered title, typically used at the top of a page as a section or hero heading.",
+      "version": "initial",
+      "imageUrl": "",
+      "docURL": "...",
+      "primary": {
+        "title": {
+          "type": "StructuredText",
+          "config": {
+            "single": "heading1",
+            "label": "Title"
+          }
+        }
+      }
+    }
+  ]
+}

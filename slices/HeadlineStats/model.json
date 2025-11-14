@@ -1,0 +1,64 @@
+{
+  "type": "SharedSlice",
+  "id": "headline_stats",
+  "name": "HeadlineStats",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "description": "Headline, emphasized word, supporting description, main image, and list of stats with labels.",
+      "version": "initial",
+      "imageUrl": "",
+      "docURL": "...",
+      "primary": {
+        "headline": {
+          "type": "StructuredText",
+          "config": {
+            "single": "heading1,strong,em",
+            "label": "Headline"
+          }
+        },
+        "supporting_text": {
+          "type": "StructuredText",
+          "config": {
+            "multi": "paragraph,strong,em",
+            "label": "Supporting Text"
+          }
+        },
+        "subtext": {
+          "type": "StructuredText",
+          "config": {
+            "multi": "paragraph,strong,em",
+            "label": "Subtext"
+          }
+        },
+        "main_image": {
+          "type": "Image",
+          "config": {
+            "label": "Main Image"
+          }
+        },
+        "stats": {
+          "type": "Group",
+          "config": {
+            "label": "Statistics",
+            "fields": {
+              "stat_value": {
+                "type": "Text",
+                "config": {
+                  "label": "Stat Value"
+                }
+              },
+              "stat_label": {
+                "type": "Text",
+                "config": {
+                  "label": "Stat Label"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

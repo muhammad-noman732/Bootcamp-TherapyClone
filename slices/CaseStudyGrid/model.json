@@ -1,0 +1,38 @@
+{
+  "type": "SharedSlice",
+  "id": "case_study_grid",
+  "name": "CaseStudyGrid",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "description": "Standard grid with heading and multiple case studies, each represented by an image.",
+      "version": "initial",
+      "imageUrl": "",
+      "docURL": "...",
+      "primary": {
+        "heading": {
+          "type": "StructuredText",
+          "config": {
+            "single": "heading2",
+            "label": "Heading"
+          }
+        },
+        "case_studies": {
+          "type": "Group",
+          "config": {
+            "label": "Case Studies",
+            "fields": {
+              "thumbnail": {
+                "type": "Image",
+                "config": {
+                  "label": "Thumbnail Image"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

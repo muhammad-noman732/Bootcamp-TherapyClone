@@ -1,0 +1,84 @@
+{
+  "type": "SharedSlice",
+  "id": "card_grid",
+  "name": "CardGrid",
+  "variations": [
+    {
+      "id": "with_pagination",
+      "name": "With Pagination",
+      "description": "Displays a grid of cards with support for pagination controls at the bottom.",
+      "version": "initial",
+      "imageUrl": "",
+      "docURL": "...",
+      "primary": {
+        "cards": {
+          "type": "Group",
+          "config": {
+            "label": "Cards",
+            "fields": {
+              "image": {
+                "type": "Image",
+                "config": {
+                  "label": "Image"
+                }
+              },
+              "tag": {
+                "type": "Text",
+                "config": {
+                  "label": "Tag"
+                }
+              },
+              "date": {
+                "type": "Text",
+                "config": {
+                  "label": "Date"
+                }
+              },
+              "title": {
+                "type": "StructuredText",
+                "config": {
+                  "single": "heading3",
+                  "label": "Title"
+                }
+              },
+              "description": {
+                "type": "StructuredText",
+                "config": {
+                  "multi": "paragraph,strong,em,hyperlink",
+                  "label": "Description"
+                }
+              }
+            }
+          }
+        },
+        "current_page": {
+          "type": "Number",
+          "config": {
+            "label": "Current Page"
+          }
+        },
+        "total_pages": {
+          "type": "Number",
+          "config": {
+            "label": "Total Pages"
+          }
+        },
+        "show_pagination": {
+          "type": "Boolean",
+          "config": {
+            "label": "Show Pagination"
+          }
+        },
+        "next_page_link": {
+          "type": "Link",
+          "config": {
+            "label": "Next Page Link",
+            "allowText": false,
+            "repeat": false,
+            "select": null
+          }
+        }
+      }
+    }
+  ]
+}

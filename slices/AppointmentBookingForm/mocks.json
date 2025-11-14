@@ -1,0 +1,69 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"title": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "heading1",
+						"content": {
+							"text": "Empty"
+						}
+					}
+				]
+			},
+			"description": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Pariatur incididunt est eiusmod. Commodo in aliqua ut adipisicing ex in Lorem ex ea incididunt exercitation proident. Exercitation veniam esse magna nostrud elit velit laboris adipisicing pariatur aliquip."
+						}
+					}
+				]
+			},
+			"form_fields": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"field_label",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "thin",
+									"type": "Text"
+								}
+							],
+							[
+								"field_type",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "time",
+									"type": "Select"
+								}
+							],
+							[
+								"is_required",
+								{
+									"__TYPE__": "BooleanContent",
+									"value": true
+								}
+							]
+						]
+					}
+				]
+			},
+			"submit_button_label": {
+				"__TYPE__": "FieldContent",
+				"value": "stretch",
+				"type": "Text"
+			}
+		},
+		"items": []
+	}
+]

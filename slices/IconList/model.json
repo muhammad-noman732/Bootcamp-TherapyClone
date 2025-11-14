@@ -1,0 +1,44 @@
+{
+  "type": "SharedSlice",
+  "id": "icon_list",
+  "name": "IconList",
+  "variations": [
+    {
+      "id": "icon_grid_simple_heading",
+      "name": "Simple Icon Grid with Heading",
+      "description": "A grid of icons with single-line labels below, introduced by a central heading. Used for lists of symptoms, features, or highlights.",
+      "version": "initial",
+      "imageUrl": "",
+      "docURL": "...",
+      "primary": {
+        "heading": {
+          "type": "StructuredText",
+          "config": {
+            "single": "heading2",
+            "label": "Heading"
+          }
+        },
+        "items": {
+          "type": "Group",
+          "config": {
+            "label": "Items",
+            "fields": {
+              "icon": {
+                "type": "Image",
+                "config": {
+                  "label": "Icon"
+                }
+              },
+              "label": {
+                "type": "Text",
+                "config": {
+                  "label": "Label"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

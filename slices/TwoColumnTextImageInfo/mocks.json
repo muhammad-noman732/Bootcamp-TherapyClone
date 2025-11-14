@@ -1,0 +1,117 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "text_image_with_contact_details",
+		"primary": {
+			"main_image": {
+				"origin": {
+					"id": "main",
+					"url": "https://images.unsplash.com/photo-1493119508027-2b584f234d6c",
+					"width": 3424,
+					"height": 3424
+				},
+				"url": "https://images.unsplash.com/photo-1493119508027-2b584f234d6c",
+				"width": 3424,
+				"height": 3424,
+				"edit": {
+					"zoom": 1,
+					"crop": {
+						"x": 0,
+						"y": 0
+					},
+					"background": "transparent"
+				},
+				"alt": "safety",
+				"credits": null,
+				"__TYPE__": "ImageContent"
+			},
+			"eyebrow": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Magna sunt aute non ex dolor."
+						}
+					}
+				]
+			},
+			"heading": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "heading1",
+						"content": {
+							"text": "Musical"
+						}
+					}
+				]
+			},
+			"highlighted_text": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "heading2",
+						"content": {
+							"text": "Stairs"
+						}
+					}
+				]
+			},
+			"openinghourstitle": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "heading3",
+						"content": {
+							"text": "Round"
+						}
+					}
+				]
+			},
+			"opening_hours": {
+				"__TYPE__": "FieldContent",
+				"value": "size",
+				"type": "Text"
+			},
+			"contact": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "heading3",
+						"content": {
+							"text": "Cause"
+						}
+					}
+				]
+			},
+			"phone_number": {
+				"__TYPE__": "FieldContent",
+				"value": "collect",
+				"type": "Text"
+			},
+			"email_address": {
+				"__TYPE__": "FieldContent",
+				"value": "slope",
+				"type": "Text"
+			},
+			"address": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "heading3",
+						"content": {
+							"text": "Human"
+						}
+					}
+				]
+			},
+			"address_text": {
+				"__TYPE__": "FieldContent",
+				"value": "origin",
+				"type": "Text"
+			}
+		},
+		"items": []
+	}
+]

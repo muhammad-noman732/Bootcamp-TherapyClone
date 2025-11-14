@@ -1,0 +1,51 @@
+{
+  "type": "SharedSlice",
+  "id": "process_steps",
+  "name": "ProcessSteps",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "description": "Displays a section title and a horizontal row of steps, each with a number, title, and description.",
+      "version": "initial",
+      "imageUrl": "",
+      "docURL": "...",
+      "primary": {
+        "section_title": {
+          "type": "StructuredText",
+          "config": {
+            "single": "heading2",
+            "label": "Section Title"
+          }
+        },
+        "steps": {
+          "type": "Group",
+          "config": {
+            "label": "Steps",
+            "fields": {
+              "step_number": {
+                "type": "Text",
+                "config": {
+                  "label": "Step Number"
+                }
+              },
+              "step_title": {
+                "type": "Text",
+                "config": {
+                  "label": "Step Title"
+                }
+              },
+              "step_description": {
+                "type": "StructuredText",
+                "config": {
+                  "multi": "paragraph",
+                  "label": "Step Description"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

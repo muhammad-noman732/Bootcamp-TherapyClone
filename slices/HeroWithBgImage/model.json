@@ -1,0 +1,37 @@
+{
+  "type": "SharedSlice",
+  "id": "hero_with_bg_image",
+  "name": "HeroWithBgImage",
+  "variations": [
+    {
+      "id": "text_centered_with_bg_image",
+      "name": "Text Centered with Background Image",
+      "description": "Centered headline and description overlaying a background image. Typically used as a large introductory banner for landing pages.",
+      "version": "initial",
+      "imageUrl": "",
+      "docURL": "...",
+      "primary": {
+        "background_image": {
+          "type": "Image",
+          "config": {
+            "label": "Background Image"
+          }
+        },
+        "title": {
+          "type": "StructuredText",
+          "config": {
+            "single": "heading1",
+            "label": "Title"
+          }
+        },
+        "description": {
+          "type": "StructuredText",
+          "config": {
+            "multi": "paragraph,strong,em,hyperlink",
+            "label": "Description"
+          }
+        }
+      }
+    }
+  ]
+}
