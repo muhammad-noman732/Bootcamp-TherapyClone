@@ -8,6 +8,7 @@ import { Menu, X } from "lucide-react";
 function HeaderContent({ settings, color }: any) {
   const [isOpen, setIsOpen] = useState(false);
 
+  // from first code (correct hover brand color)
   const hoverColorClass = "hover:text-[#F6784F]";
 
   return (
@@ -22,7 +23,7 @@ function HeaderContent({ settings, color }: any) {
         `)}
       >
         {/* LOGO */}
-        <div className="flex items-center shrink-0">
+        <div className="flex items-center flex-shrink-0">
           {settings.data.logo && (
             <PrismicNextLink field={settings.data.logolink}>
               <PrismicNextImage
@@ -34,7 +35,7 @@ function HeaderContent({ settings, color }: any) {
                   lg:w-[168px]
                   md:w-[130px]
                   `,
-                  color === "white" ? "invert" : "invert-0"
+                  color=== "white" ? "invert-0" : "invert"
                 )}
                 alt=""
               />
@@ -66,8 +67,7 @@ function HeaderContent({ settings, color }: any) {
                   className={clsx(
                     `
                     font-poppins font-normal transition-colors duration-200
-                    leading-6
-                    vertical-align-middle
+                    leading-[24px]
                     lg:text-[16px]
                     md:text-[14px]
                     `,
@@ -85,10 +85,10 @@ function HeaderContent({ settings, color }: any) {
         {/* CTA BUTTON */}
         <div
           className={clsx(`
-          hidden md:flex items-center shrink-0
-          lg:w-[244px]
-          md:w-[180px]
-        `)}
+            hidden md:flex items-center flex-shrink-0
+            lg:w-[244px]
+            md:w-[180px]
+          `)}
         >
           {settings.data.ctalink && (
             <PrismicNextLink
@@ -100,8 +100,8 @@ function HeaderContent({ settings, color }: any) {
                 transition-colors duration-200
                 lg:px-5 lg:py-2 lg:text-[16px]
                 md:px-3 md:py-1 md:text-[13px]
-                leading-6
-              `,
+                leading-[24px]
+                `,
                 color === "white"
                   ? "text-white hover:text-gray-300"
                   : "text-black " + hoverColorClass
@@ -114,8 +114,10 @@ function HeaderContent({ settings, color }: any) {
                   className={clsx(
                     `
                     mr-2 object-contain
-                    ${color === "white" ? "brightness-0 invert" : "brightness-0 invert-0"}
-                  `
+                    `,
+                    color === "white"
+                      ? "brightness-0 invert"
+                      : "brightness-0 invert-0"
                   )}
                   alt=""
                 />
@@ -134,13 +136,14 @@ function HeaderContent({ settings, color }: any) {
           <Menu
             className={clsx(
               "w-7 h-7",
+              // first code logic
               color === "white" ? "text-white" : "text-black"
             )}
           />
         </button>
       </div>
 
-      {/* MOBILE MENU (unchanged) */}
+      {/* MOBILE MENU */}
       {isOpen && (
         <div className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 md:hidden">
           <div className="absolute top-0 right-0 w-3/4 max-w-sm bg-white h-[500px] p-6 shadow-xl flex flex-col">
