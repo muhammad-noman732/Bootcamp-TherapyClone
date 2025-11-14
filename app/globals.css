@@ -80,3 +80,52 @@ body {
 .text-slate-700 {
   color: #4a6568; /* lighter slate */
 }
+
+/* marquee base */
+.marquee {
+  position: relative;
+  overflow: hidden;       /* hide scrolled-out logos */
+  width: 100%;
+}
+
+/* track holds the duplicated content inline */
+.track {
+  display: flex;
+  width: max-content;     
+  gap: 4rem;            
+  white-space: nowrap;    /*/
+  align-items: center;
+  /* animation */
+  animation: marquee-linear var(--marquee-duration, 25s) linear infinite;
+}
+
+/* each logo should never shrink and keep its intrinsic width */
+.logo-item {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* keyframes: translate left by 50% of the track (because we duplicated the list) */
+@keyframes marquee-linear {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* pause on hover for usability */
+.marquee:hover .track,
+.marquee:focus-within .track {
+  animation-play-state: paused;
+}
+
+/* prefer reduced motion accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .track {
+    animation: none;
+  }
+}

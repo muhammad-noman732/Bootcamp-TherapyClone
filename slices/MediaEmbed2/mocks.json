@@ -1,0 +1,96 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"top_heading": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "heading1",
+						"content": {
+							"text": "Longer"
+						}
+					}
+				]
+			},
+			"paragraph": {
+				"__TYPE__": "FieldContent",
+				"value": "replace",
+				"type": "Text"
+			},
+			"items": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"item",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "got",
+									"type": "Text"
+								}
+							]
+						]
+					}
+				]
+			},
+			"paragraph2": {
+				"__TYPE__": "FieldContent",
+				"value": "straw",
+				"type": "Text"
+			},
+			"heading2": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "heading2",
+						"content": {
+							"text": "Studying"
+						}
+					}
+				]
+			},
+			"content": {
+				"__TYPE__": "FieldContent",
+				"value": "window",
+				"type": "Text"
+			},
+			"bgcontent": {
+				"__TYPE__": "FieldContent",
+				"value": "using",
+				"type": "Text"
+			},
+			"endcontent": {
+				"__TYPE__": "FieldContent",
+				"value": "original",
+				"type": "Text"
+			},
+			"meidaimage": {
+				"__TYPE__": "ImageContent",
+				"origin": {
+					"id": "main",
+					"url": "https://images.unsplash.com/photo-1531771686035-25f47595c87a",
+					"width": 3024,
+					"height": 3778
+				},
+				"url": "https://images.unsplash.com/photo-1531771686035-25f47595c87a",
+				"width": 3024,
+				"height": 3778,
+				"edit": {
+					"zoom": 1,
+					"crop": {
+						"x": 0,
+						"y": 0
+					},
+					"background": "transparent"
+				},
+				"alt": "air",
+				"thumbnails": {}
+			}
+		},
+		"items": []
+	}
+]

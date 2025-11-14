@@ -45,7 +45,9 @@ export default async function TwinglyPosts({
   POST_PER_PAGE,
   page = 1,
 }: Props) {
-  const sevenDaysAgo = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000).toISOString();
+  const sevenDaysAgo = new Date(
+    Date.now() - 7 * 24 * 60 * 60 * 1000
+  ).toISOString();
 
   const res = await fetch(
     `https://api.twingly.com/blog/livefeed/api/v5/GetData?apikey=${apiKey}&timestamp=${sevenDaysAgo}&maxPosts=100&format=json`,
@@ -54,15 +56,15 @@ export default async function TwinglyPosts({
 
   if (!res.ok) {
     console.error("Failed to fetch Twingly data");
-    return <div className="text-center text-red-600 mt-10">Failed to load posts</div>;
+    return (
+      <div className="text-center text-red-600 mt-10">Failed to load posts</div>
+    );
   }
 
   const data: TwinglyResponse = await res.json();
 
   const filteredPosts = data.documents.filter(
-    (p) =>
-      p.language_code === "en" ||
-      /^[\u0000-\u007F]*$/.test(p.title)
+    (p) => p.language_code === "en" || /^[\u0000-\u007F]*$/.test(p.title)
   );
 
   const startIndex = (page - 1) * POST_PER_PAGE;
@@ -82,40 +84,43 @@ export default async function TwinglyPosts({
     <section className="px-[30px] max-w-[1440px] mx-auto">
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
         {paginatedPosts.map((post) => (
-          <article
+          <Link
             key={post.id}
-            className="flex flex-col  overflow-hidden "
+            href='/blogs'
+            className="block"
           >
-            {/* Image */}
-            <div className="relative w-full aspect-6/3">
-              <Image
-                src={post.images.length > 0 ? post.images[0] : "/blog.svg"}
-                alt={post.title}
-                fill
-                className="object-cover"
-              />
-            </div>
-
-            {/* Content */}
-            <div className="pt-4">
-              <div className="flex items-center justify-between">
-                <span className="text-base font-normal bg-[#F6784F] text-white px-2 py-0.5 font-poppin ">
-                  {post.tags[0] || "General"}
-                </span>
-                <span className="text-base font-normal text-[#445152] font-poppin">
-                  {new Date(post.published_at).toLocaleDateString("en-US", {
-                    month: "long",
-                    day: "numeric",
-                    year: "numeric",
-                  })}
-                </span>
+            <article className="flex flex-col overflow-hidden cursor-pointer hover:opacity-90 transition">
+              {/* Image */}
+              <div className="relative w-full aspect-6/3">
+                <Image
+                  src={post.images.length > 0 ? post.images[0] : "/blog.svg"}
+                  alt={post.title}
+                  fill
+                  className="object-cover"
+                />
               </div>
 
-              <h3 className="text-xl font-semibold mt-2 leading-snug text-[#1E3B3D] ">
-                {post.title || "Untitled Post"}
-              </h3>
-            </div>
-          </article>
+              {/* Content */}
+              <div className="pt-4">
+                <div className="flex items-center justify-between">
+                  <span className="text-base font-normal bg-[#F6784F] text-white px-2 py-0.5 font-poppin">
+                    {post.tags[0] || "General"}
+                  </span>
+                  <span className="text-base font-normal text-[#445152] font-poppin">
+                    {new Date(post.published_at).toLocaleDateString("en-US", {
+                      month: "long",
+                      day: "numeric",
+                      year: "numeric",
+                    })}
+                  </span>
+                </div>
+
+                <h3 className="text-xl font-semibold mt-2 leading-snug text-[#1E3B3D]">
+                  {post.title || "Untitled Post"}
+                </h3>
+              </div>
+            </article>
+          </Link>
         ))}
       </div>
 

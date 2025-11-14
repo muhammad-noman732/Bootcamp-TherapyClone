@@ -1,0 +1,24 @@
+{
+  "type": "SharedSlice",
+  "id": "video_embed",
+  "name": "VideoEmbed",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "description": "Single full-width embedded video with a customizable source URL.",
+      "version": "initial",
+      "imageUrl": "",
+      "docURL": "...",
+      "primary": {
+        "video": {
+          "type": "Embed",
+          "config": {
+            "label": "Video"
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

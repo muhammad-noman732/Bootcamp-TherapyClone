@@ -3,10 +3,10 @@ import { PrismicRichText, SliceComponentProps } from "@prismicio/react";
 import { PrismicNextImage } from "@prismicio/next";
 import { Content } from "@prismicio/client";
 
-export type InformationWithImageGridProps =
-  SliceComponentProps<Content.InformationWithImageGridSlice>;
+export type InfoWithImageSlice =
+  SliceComponentProps<Content.InfoWithImagesGridSlice>;
 
-const InformationWithImageGrid: FC<InformationWithImageGridProps> = ({
+const InformationWithImageGrid: FC<InfoWithImageSlice> = ({
   slice,
 }) => {
   return (
@@ -59,7 +59,7 @@ const InformationWithImageGrid: FC<InformationWithImageGridProps> = ({
         {/* ---------- Image Grid ---------- */}
         <div className="flex flex-col lg:flex-row gap-10 mt-12 items-start">
           {/* Left column: single tall image */}
-          <div className="basis-2/5 flex-shrink-0">
+          <div className="basis-2/5 shrink-0">
             {slice.primary.images?.slice(0, 1).map((item, idx) => (
               <div
                 key={idx}

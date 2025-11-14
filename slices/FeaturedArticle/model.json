@@ -1,0 +1,49 @@
+{
+  "type": "SharedSlice",
+  "id": "featured_article",
+  "name": "FeaturedArticle",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "description": "The basic variation with image, meta, title, and summary fields.",
+      "version": "initial",
+      "imageUrl": "",
+      "docURL": "...",
+      "primary": {
+        "main_image": {
+          "type": "Image",
+          "config": {
+            "label": "Main Image"
+          }
+        },
+        "publish_date": {
+          "type": "Date",
+          "config": {
+            "label": "Publish Date"
+          }
+        },
+        "category": {
+          "type": "Text",
+          "config": {
+            "label": "Category"
+          }
+        },
+        "title": {
+          "type": "StructuredText",
+          "config": {
+            "single": "heading1",
+            "label": "Title"
+          }
+        },
+        "summary": {
+          "type": "StructuredText",
+          "config": {
+            "multi": "paragraph,strong,em,hyperlink",
+            "label": "Summary"
+          }
+        }
+      }
+    }
+  ]
+}

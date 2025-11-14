@@ -24,7 +24,7 @@ const FeaturedArticleWithList: FC<FeaturedArticleWithListProps> = ({
         <div className="relative w-full lg:w-[55%] xl:w-[50%]">
           <PrismicNextImage
             field={featured?.image}
-            className="object-cover w-full h-[320px] sm:h-[360px] lg:h-[380px] rounded-md"
+            className="object-cover w-full h-80 sm:h-[360px] lg:h-[380px] rounded-md"
             alt=""
           />
 
@@ -38,7 +38,7 @@ const FeaturedArticleWithList: FC<FeaturedArticleWithListProps> = ({
               w-[calc(100%-2rem)] sm:w-[340px] lg:w-[360px]
               left-1/2 lg:left-6
               -translate-x-1/2 lg:translate-x-0
-              bottom-[-65px] sm:bottom-[-80px] lg:bottom-[-100px]
+              bottom-[-65px] sm:bottom-20 lg:bottom-[-100px]
             "
           >
             <div className="flex items-center gap-3 text-sm mb-1">

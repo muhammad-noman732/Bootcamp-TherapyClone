@@ -1,16 +1,15 @@
-"use client";
 
 import { FC } from "react";
 import { PrismicRichText, SliceComponentProps } from "@prismicio/react";
-import { Content } from "@prismicio/client";
+import { Content, asText } from "@prismicio/client";
 
 export type AppointmentFormProps =
-  SliceComponentProps<Content.AppointmentFormSlice>;
+  SliceComponentProps<Content.AppointmentBookingFormSlice>;
 
 const AppointmentForm: FC<AppointmentFormProps> = ({ slice }) => {
-  const titleText = slice.primary.title?.[0]?.text || "";
-  const words = titleText.trim().split(" ");
-  const lastWord = words.pop();
+  const titleText = asText(slice.primary.title || []);
+  const words = titleText.trim().split(/\s+/).filter(Boolean);
+  const lastWord = words.pop() ?? "";
   const firstPart = words.join(" ");
 
   const groupedFields = [
@@ -25,9 +24,9 @@ const AppointmentForm: FC<AppointmentFormProps> = ({ slice }) => {
     <section
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
-      className="bg-gradient-to-b from-[#1E3B3D] via-[#4E6263] to-[#FFFFFF] py-25 px-4 sm:px-8 md:px-16  lg:pr-0"
+      className="bg-linear-to-b from-[#1E3B3D] via-[#4E6263] to-[#FFFFFF] py-25 px-4 sm:px-8 md:px-16  lg:pr-0"
     >
-      {/* ✅ Center the whole content for very large screens */}
+      {/*Center the whole content for very large screens */}
       <div className="max-w-[1440px] mx-auto">
         {/* ---------- Header ---------- */}
         <header className="text-center mb-10">

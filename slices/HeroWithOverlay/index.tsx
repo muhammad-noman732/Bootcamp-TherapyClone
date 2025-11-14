@@ -46,7 +46,7 @@ const HeroWithOverlay: FC<HeroWithOverlayProps> = ({ slice }) => {
             field={title}
             components={{
               heading1: ({ children }) => (
-                <h1 className="text-[42px] leading-tight md:text-8xl mt-3 font-normal uppercase tracking-wide text-[#EEDE96] font-italiana">
+                <h1 className="text-[42px] leading-tight md:text-8xl mt-1 font-normal uppercase tracking-wide text-[#EEDE96] font-italiana">
                   {children}
                 </h1>
               ),

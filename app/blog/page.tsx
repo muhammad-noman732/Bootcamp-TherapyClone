@@ -31,7 +31,6 @@ export default async function Blog({searchParams}: BlogPageProps) {
      {/* get the blog posts  */}
       <TwinglyPosts  
         apiKey={apiKey}
-
         POST_PER_PAGE={6} 
         page={currentPage} />
       

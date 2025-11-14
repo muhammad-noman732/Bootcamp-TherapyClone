@@ -1,15 +1,15 @@
 import { FC } from "react";
-import { Content } from "@prismicio/client";
+import { Content, asText } from "@prismicio/client";
 import { SliceComponentProps, PrismicRichText } from "@prismicio/react";
 import { PrismicNextImage } from "@prismicio/next";
 
 export type HeadlineStatsProps = SliceComponentProps<Content.HeadlineStatsSlice>;
 
 const HeadlineStats: FC<HeadlineStatsProps> = ({ slice }) => {
-  const headlineText = slice.primary.headline?.[0]?.text || "";
-  const words = headlineText.split(" ");
-  const lastWord = words.pop();
-  const secondLastWord = words.pop();
+  const headlineText = asText(slice.primary.headline || []);
+  const words = headlineText.trim().split(/\s+/).filter(Boolean);
+  const lastWord = words.pop() ?? "";
+  const secondLastWord = words.pop() ?? "";
   const firstPart = words.join(" ");
 
   return (
