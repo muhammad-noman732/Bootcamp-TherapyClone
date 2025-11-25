@@ -1,5 +1,3 @@
-"use client";
-
 import { FC } from "react";
 import { Content } from "@prismicio/client";
 import { SliceComponentProps, PrismicRichText } from "@prismicio/react";
@@ -40,7 +38,7 @@ const MediaEmbed2: FC<MediaEmbed2Props> = ({ slice }) => {
                 {children}
               </h1>
             ),
-           }}
+          }}
         />
       </div>
 
@@ -54,13 +52,16 @@ const MediaEmbed2: FC<MediaEmbed2Props> = ({ slice }) => {
       {/* List Items */}
       <ul className="list-disc ml-6 mb-10 space-y-2">
         {slice.primary.items?.map((item, i) => (
-          <li key={i} className="opacity-80 font-poppin text-base leading-normal">
+          <li
+            key={i}
+            className="opacity-80 font-poppin text-base leading-normal"
+          >
             {item.item}
           </li>
         ))}
       </ul>
 
-     {/* Paragraph */}
+      {/* Paragraph */}
       {slice.primary.paragraph2 && (
         <p className="text-base  leading-normal font-normal font-poppin mb-6">
           {slice.primary.paragraph}
@@ -78,8 +79,8 @@ const MediaEmbed2: FC<MediaEmbed2Props> = ({ slice }) => {
         </div>
       )}
 
-        <div className="px-20 py-2">
-           <PrismicRichText
+      <div className="px-20 py-2">
+        <PrismicRichText
           field={slice.primary.heading2}
           components={{
             heading2: ({ children }) => (
@@ -87,30 +88,31 @@ const MediaEmbed2: FC<MediaEmbed2Props> = ({ slice }) => {
                 {children}
               </h2>
             ),
-           }}
+          }}
         />
-           {slice.primary.content && (
-          <p className="leading-7 text-base font-normal font-poppin  text-[#445152]">{slice.primary.content}</p>
+        {slice.primary.content && (
+          <p className="leading-7 text-base font-normal font-poppin  text-[#445152]">
+            {slice.primary.content}
+          </p>
         )}
+      </div>
 
-        </div>
-       
       {/* Extra Content Blocks */}
-        <div className="space-y-6 px-[30px] bg-[#445152]">
-       
+      <div className="space-y-6 px-[30px] bg-[#445152]">
         {slice.primary.bgcontent && (
-          <p className="p-[52px] font-poppin font-normal text-[18px] leading-normal  text-white">{slice.primary.bgcontent}</p>
+          <p className="p-[52px] font-poppin font-normal text-[18px] leading-normal  text-white">
+            {slice.primary.bgcontent}
+          </p>
         )}
       </div>
 
-      
       <div className="px-20 py-7">
-         {slice.primary.bgcontent && (
-          <p className=" text-base  font-poppin font-normal text-[18px] leading-normal  text-[#445152]">{slice.primary.endcontent}</p>
+        {slice.primary.bgcontent && (
+          <p className=" text-base  font-poppin font-normal text-[18px] leading-normal  text-[#445152]">
+            {slice.primary.endcontent}
+          </p>
         )}
       </div>
-         
-      
     </section>
   );
 };

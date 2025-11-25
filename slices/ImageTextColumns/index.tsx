@@ -1,5 +1,3 @@
-
-
 import { FC } from "react";
 import { PrismicRichText, SliceComponentProps } from "@prismicio/react";
 import { PrismicNextImage, PrismicNextLink } from "@prismicio/next";
@@ -23,7 +21,7 @@ const ImageTextColumns: FC<ImageTextColumnsProps> = ({ slice }) => {
             field={slice.primary.main_image}
             className="w-full h-[300px] sm:h-[450px] md:h-[600px] lg:h-[750px] object-cover"
             alt=""
-        />
+          />
           <div className="absolute inset-0 bg-[#1E3B3D] opacity-50"></div>
         </div>
 

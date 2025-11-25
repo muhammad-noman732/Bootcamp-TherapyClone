@@ -1,18 +1,15 @@
-import { SliceZone } from "@prismicio/react"
-import { Header } from "../components/header/Header"
-import { components } from "@/slices"
+import { SliceZone } from "@prismicio/react";
+import { Header } from "../components/header/Header";
+import { components } from "@/slices";
 import { createClient } from "@/prismicio";
 
 export default async function Services() {
-      const client = createClient();
-      const page = await client.getSingle("book_appointment")
+  const client = createClient();
+  const page = await client.getSingle("book_appointment");
   return (
     <div>
-        <Header color="white"/>
-                <SliceZone slices={page.data.slices} components={components} />
-     
+      <Header color="white" />
+      <SliceZone slices={page.data.slices} components={components} />
     </div>
-  )
+  );
 }
-
-

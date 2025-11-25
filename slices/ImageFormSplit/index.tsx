@@ -1,5 +1,3 @@
-"use client";
-
 import { FC } from "react";
 import { Content } from "@prismicio/client";
 import { SliceComponentProps } from "@prismicio/react";
@@ -43,85 +41,84 @@ const ImageFormSplit: FC<ImageFormSplitProps> = ({ slice }) => {
         </div>
 
         {/* ---------- Right Side Floating Form ---------- */}
-       {/* ---------- Right Side Floating Form ---------- */}
-<div
-  className="
+
+        <div
+          className="
     w-full lg:w-auto 
     flex justify-center 
     mt-10 lg:mt-0 z-10
     lg:absolute lg:left-[38%] lg:top-1/2 lg:-translate-y-1/2
   "
->
-  {/* OUTER BORDER WITH GRADIENT */}
-  <div
-    className="
+        >
+          {/* OUTER BORDER WITH GRADIENT */}
+          <div
+            className="
       bg-[linear-gradient(180deg,#F6784F_0%,#FFFFFF_100%)]
       p-[25px] sm:p-[30px]
       max-w-[780px] w-full
       shadow-lg rounded-sm
       lg:h-[668px]      /* height only on large screens */
     "
-  >
-    {/* INNER WHITE FORM */}
-    <div className="bg-white w-full h-full py-6 px-6 lg:h-full">
-      <form className="space-y-3 h-full flex flex-col justify-between">
-        <div className="flex flex-wrap -mx-2">
-          {slice.primary.form_fields.map((item: any, index: number) => {
-            const label = item.field_label as string;
-            const type = item.field_type || "text";
-            const isRequired = item.is_required;
+          >
+            {/* INNER WHITE FORM */}
+            <div className="bg-white w-full h-full py-6 px-6 lg:h-full">
+              <form className="space-y-3 h-full flex flex-col justify-between">
+                <div className="flex flex-wrap -mx-2">
+                  {slice.primary.form_fields.map((item: any, index: number) => {
+                    const label = item.field_label as string;
+                    const type = item.field_type || "text";
+                    const isRequired = item.is_required;
 
-            const halfWidthLabels = [
-              "First Name",
-              "Last Name",
-              "Phone Number",
-              "Service Of Interest",
-            ];
-            const isHalfWidth = halfWidthLabels.includes(label);
+                    const halfWidthLabels = [
+                      "First Name",
+                      "Last Name",
+                      "Phone Number",
+                      "Service Of Interest",
+                    ];
+                    const isHalfWidth = halfWidthLabels.includes(label);
 
-            return (
-              <div
-                key={index}
-                className={`px-2 mb-4 ${
-                  isHalfWidth ? "w-full sm:w-1/2" : "w-full"
-                }`}
-              >
-                {type === "textarea" ? (
-                  <textarea
-                    placeholder={label}
-                    rows={4}
-                    required={isRequired}
-                    className="w-full py-3 px-4 border border-gray-300 bg-white focus:outline-none focus:ring-2 focus:ring-[#F6784F] placeholder:text-gray-500"
-                  />
-                ) : (
-                  <input
-                    type={type}
-                    placeholder={label}
-                    required={isRequired}
-                    className="w-full py-3 px-4 border border-gray-300 bg-white focus:outline-none focus:ring-2 focus:ring-[#F6784F] placeholder:text-gray-500"
-                  />
-                )}
-              </div>
-            );
-          })}
-        </div>
+                    return (
+                      <div
+                        key={index}
+                        className={`px-2 mb-4 ${
+                          isHalfWidth ? "w-full sm:w-1/2" : "w-full"
+                        }`}
+                      >
+                        {type === "textarea" ? (
+                          <textarea
+                            placeholder={label}
+                            rows={4}
+                            required={isRequired}
+                            className="w-full py-3 px-4 border border-gray-300 bg-white focus:outline-none focus:ring-2 focus:ring-[#F6784F] placeholder:text-gray-500"
+                          />
+                        ) : (
+                          <input
+                            type={type}
+                            placeholder={label}
+                            required={isRequired}
+                            className="w-full py-3 px-4 border border-gray-300 bg-white focus:outline-none focus:ring-2 focus:ring-[#F6784F] placeholder:text-gray-500"
+                          />
+                        )}
+                      </div>
+                    );
+                  })}
+                </div>
 
-        {/* ---------- Submit Button ---------- */}
-        <button
-          type="submit"
-          className="
+                {/* ---------- Submit Button ---------- */}
+                <button
+                  type="submit"
+                  className="
             w-full bg-[#E7D07D] text-gray-900 
             font-medium py-3 
             hover:bg-[#d3bd6a] transition
           "
-        >
-          {slice.primary.submit_button }
-        </button>
-      </form>
-    </div>
-  </div>
-</div>
-
+                >
+                  {slice.primary.submit_button}
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );

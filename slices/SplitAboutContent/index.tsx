@@ -20,7 +20,6 @@ const SplitAboutContent: FC<SplitAboutContentProps> = ({ slice }) => {
     >
       {/* ---------- Centered Container ---------- */}
       <div className="max-w-[1440px] mx-auto w-full px-[30px] min-h-screen flex flex-col space-y-5">
-
         {/* TOP ROW */}
         <div className="flex flex-wrap justify-between items-center gap-y-10 lg:gap-x-10 pt-8 lg:pt-16">
           {/* Left Image */}

@@ -17,7 +17,6 @@ const ContactFormDetails: FC<ContactFormDetailsProps> = ({ slice }) => {
       "
     >
       <div className="w-full">
-        
         <div className="flex flex-col space-y-4 mb-16 max-w-7xl mx-auto">
           <p className="text-base font-medium tracking-widest text-[#F6784F] mb-2 font-poppin uppercase">
             {slice.primary.top_heading}
@@ -31,7 +30,6 @@ const ContactFormDetails: FC<ContactFormDetailsProps> = ({ slice }) => {
         <div className="grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-16 lg:gap-24 max-w-[85rem] mx-auto">
           {/* LEFT COLUMN: FORM CONTAINER */}
           <div className="relative">
-
             <div
               className="
                 bg-[linear-gradient(180deg,#F6784F_0%,#FFFFFF_100%)]

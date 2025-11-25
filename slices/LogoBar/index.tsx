@@ -15,17 +15,18 @@ const LogoBar: FC<LogoBarProps> = ({ slice }) => {
       className="py-6 px-6 sm:px-10 relative overflow-hidden bg-transparent"
     >
       <div className="w-full mx-auto relative">
-
         {/* Background heading */}
         {slice.primary.headline && (
           <PrismicRichText
             field={slice.primary.headline}
             components={{
               heading2: ({ children }) => (
-                <h2 className="absolute inset-0 flex items-center justify-center font-sans font-normal 
+                <h2
+                  className="absolute inset-0 flex items-center justify-center font-sans font-normal 
                 text-[56px] leading-[62px] sm:text-[92px] sm:leading-[100px] 
                 lg:text-[128px] lg:leading-[136px] 
-                text-center uppercase text-gray-300 pointer-events-none z-0">
+                text-center uppercase text-gray-300 pointer-events-none z-0"
+                >
                   {children}
                 </h2>
               ),
@@ -38,7 +39,7 @@ const LogoBar: FC<LogoBarProps> = ({ slice }) => {
           <div className="track">
             {logos.map((item, index) => (
               <div
-                key={`${item.logo_image.id}-${index}`}     
+                key={`${item.logo_image.id}-${index}`}
                 className="logo-item shrink-0 flex items-center justify-center"
               >
                 <PrismicNextImage
@@ -50,7 +51,6 @@ const LogoBar: FC<LogoBarProps> = ({ slice }) => {
             ))}
           </div>
         </div>
-
       </div>
     </section>
   );

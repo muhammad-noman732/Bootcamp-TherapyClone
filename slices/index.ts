@@ -17,7 +17,7 @@ export const components = {
   feature_list_image: dynamic(() => import("./FeatureListImage")),
   featured_article: dynamic(() => import("./FeaturedArticle")),
   featured_article_with_list: dynamic(
-    () => import("./FeaturedArticleWithList"),
+    () => import("./FeaturedArticleWithList")
   ),
   half_media_content_info: dynamic(() => import("./HalfMediaContentInfo")),
   headline_stats: dynamic(() => import("./HeadlineStats")),

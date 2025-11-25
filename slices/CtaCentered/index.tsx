@@ -12,11 +12,8 @@ const CtaCentered: FC<CtaCenteredProps> = ({ slice }) => {
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
     >
-
       {/*  Center Content */}
       <div className="max-w-4xl mx-auto text-center px-6">
-
-        
         <div className="text-3xl md:text-5xl  tracking-wide font-sans font-normal leading-normal uppercase text-center">
           <PrismicRichText field={slice.primary.title} />
         </div>
@@ -44,7 +41,6 @@ const CtaCentered: FC<CtaCenteredProps> = ({ slice }) => {
             "
           />
         )}
-
       </div>
     </section>
   );

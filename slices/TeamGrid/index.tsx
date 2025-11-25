@@ -14,7 +14,6 @@ const TeamGrid: FC<TeamGridProps> = ({ slice }) => {
     >
       {/* CENTERED CONTAINER */}
       <div className="max-w-[1440px] mx-auto w-full">
-
         {/* HEADER */}
         <div className="flex flex-wrap items-center justify-between gap-4 mb-12 md:px-10">
           <div className="text-2xl sm:text-3xl md:text-4xl font-semibold text-[#1E3B3D]">
@@ -31,7 +30,6 @@ const TeamGrid: FC<TeamGridProps> = ({ slice }) => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
           {slice.primary.people.map((item, index) => (
             <div key={index} className="flex flex-col">
-
               {/* IMAGE (CENTERED, SMALLER) */}
               <div className="relative w-full flex justify-center">
                 <PrismicNextImage
@@ -43,16 +41,11 @@ const TeamGrid: FC<TeamGridProps> = ({ slice }) => {
 
               {/* WHITE BOX */}
               <div className="bg-white shadow-lg pt-8 pb-6 px-6 text-center -mt-10 relative w-full">
-
                 {/* LEFT BORDER */}
-                <div
-                  className="absolute top-0 left-[0%] -translate-y-10 h-10 w-[26px] bg-white"
-                />
+                <div className="absolute top-0 left-[0%] -translate-y-10 h-10 w-[26px] bg-white" />
 
                 {/* RIGHT BORDER */}
-                <div
-                  className="absolute top-0 right-[0%] -translate-y-10 h-10 w-[26px] bg-white"
-                />
+                <div className="absolute top-0 right-[0%] -translate-y-10 h-10 w-[26px] bg-white" />
 
                 {/* NAME */}
                 <p className="font-semibold font-sans text-[#1E3B3D] uppercase tracking-wider text-xl">
@@ -70,11 +63,13 @@ const TeamGrid: FC<TeamGridProps> = ({ slice }) => {
                     <PrismicNextLink
                       key={i}
                       field={link}
-                      className={link.variant + " text-base font-medium font-poppin text-[#F6784F] hover:text-[#F6784F]/80"}
+                      className={
+                        link.variant +
+                        " text-base font-medium font-poppin text-[#F6784F] hover:text-[#F6784F]/80"
+                      }
                     />
                   ))}
                 </div>
-
               </div>
             </div>
           ))}

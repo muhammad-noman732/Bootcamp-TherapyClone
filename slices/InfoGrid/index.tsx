@@ -20,7 +20,6 @@ const InfoGrid: FC<InfoGridProps> = ({ slice }) => {
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
       className="py-10 px-6 md:px-16  bg-[linear-gradient(90deg,rgba(246,120,79,0)_0%,rgba(246,120,79,0.08)_12%,rgba(246,120,79,0.28)_25%,rgba(246,120,79,0.42)_38%,rgba(246,120,79,0.5)_50%,rgba(246,120,79,0.42)_63%,rgba(250,186,165,0.28)_75%,rgba(246,120,79,0.08)_88%,rgba(246,120,79,0)_100%)]"
-    
     >
       {/* Heading */}
       <div className="text-center mb-3">
@@ -28,9 +27,7 @@ const InfoGrid: FC<InfoGridProps> = ({ slice }) => {
           field={slice.primary.title}
           components={{
             heading2: ({ children }) => (
-              <h2
-                className="md:text-9xl leading-tight uppercase font-sans font-normal bg-linear-to-b from-[#F6784F99] to-transparent bg-clip-text text-transparent"
-              >
+              <h2 className="md:text-9xl leading-tight uppercase font-sans font-normal bg-linear-to-b from-[#F6784F99] to-transparent bg-clip-text text-transparent">
                 {children}
               </h2>
             ),

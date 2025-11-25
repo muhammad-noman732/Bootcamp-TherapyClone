@@ -48,10 +48,7 @@ const FeatureListImage: FC<FeatureListImageProps> = ({ slice }) => {
             {/* Bullet List */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-5 mt-5 md:mt-12 lg:mt-23 gap-x-12">
               {slice.primary.items?.map((item, index) => (
-                <div
-                  key={index}
-                  className="flex items-start justify-start"
-                >
+                <div key={index} className="flex items-start justify-start">
                   <div className="w-2 h-2 rounded-full bg-[#F6784F] mt-2 mr-3 shrink-0"></div>
                   <p className="text-sm sm:text-base font-normal uppercase tracking-wider font-poppin">
                     {item.label}

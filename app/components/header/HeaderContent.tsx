@@ -35,7 +35,7 @@ function HeaderContent({ settings, color }: any) {
                   lg:w-[168px]
                   md:w-[130px]
                   `,
-                  color=== "white" ? "invert-0" : "invert"
+                  color === "white" ? "invert-0" : "invert"
                 )}
                 alt=""
               />

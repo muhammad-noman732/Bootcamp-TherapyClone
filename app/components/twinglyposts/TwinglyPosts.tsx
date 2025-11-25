@@ -84,11 +84,7 @@ export default async function TwinglyPosts({
     <section className="px-[30px] max-w-[1440px] mx-auto">
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
         {paginatedPosts.map((post) => (
-          <Link
-            key={post.id}
-            href='/blogs'
-            className="block"
-          >
+          <Link key={post.id} href="/blogs" className="block">
             <article className="flex flex-col overflow-hidden cursor-pointer hover:opacity-90 transition">
               {/* Image */}
               <div className="relative w-full aspect-6/3">

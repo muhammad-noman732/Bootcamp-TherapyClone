@@ -19,7 +19,6 @@ const FeaturedArticleWithList: FC<FeaturedArticleWithListProps> = ({
       data-slice-variation={slice.variation}
     >
       <div className="w-full max-w-[1440px] mx-auto flex flex-col lg:flex-row lg:items-start gap-10 lg:gap-16 px-4 md:px-10 xl:px-16">
-
         {/*  LEFT SECTION */}
         <div className="relative w-full lg:w-[55%] xl:w-[50%]">
           <PrismicNextImage

@@ -11,11 +11,9 @@ const FeaturedArticle: FC<FeaturedArticleProps> = ({ slice }) => {
     <section
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
-      className="bg-[linear-gradient(180deg,#EEDE96_0%,rgba(238,222,150,0)_100%)] py-35 pb-32" 
-
+      className="bg-[linear-gradient(180deg,#EEDE96_0%,rgba(238,222,150,0)_100%)] py-35 pb-32"
     >
       <div className="relative max-w-[1440px] mx-auto">
-
         {/* Main Image */}
         <PrismicNextImage
           field={slice.primary.main_image}

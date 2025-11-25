@@ -3,8 +3,7 @@ import { Content } from "@prismicio/client";
 import { PrismicRichText, SliceComponentProps } from "@prismicio/react";
 import { PrismicNextImage } from "@prismicio/next";
 
-export type TeamShowcaseProps =
-  SliceComponentProps<Content.TeamShowcaseSlice>;
+export type TeamShowcaseProps = SliceComponentProps<Content.TeamShowcaseSlice>;
 
 const TeamShowcase: FC<TeamShowcaseProps> = ({ slice }) => {
   return (

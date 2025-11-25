@@ -21,20 +21,21 @@ const InformationalFeatures: FC<InformationalFeaturesProps> = ({ slice }) => {
     >
       {/* Main Container */}
       <div className="max-w-7xl mx-auto">
-
         {/* ---------- Main Heading ---------- */}
         <PrismicRichText
           field={slice.primary.section_heading}
           components={{
             heading2: ({ children }) => (
-              <h2 className="
+              <h2
+                className="
                 text-3xl sm:text-4xl md:text-5xl
                 lg:text-6xl
                 font-normal uppercase text-[#1E3B3D]
                 mb-8 sm:mb-10 md:mb-12
                 tracking-wide leading-wider font-sans
                 text-center md:text-left
-              ">
+              "
+              >
                 {children}
               </h2>
             ),
@@ -43,7 +44,6 @@ const InformationalFeatures: FC<InformationalFeaturesProps> = ({ slice }) => {
 
         {/* ---------- Two-Column Layout ---------- */}
         <div className="flex flex-col lg:flex-row gap-8 md:gap-10">
-
           {/* ----- Left Column: Image ----- */}
           <div className="lg:w-1/2">
             <PrismicNextImage
@@ -58,18 +58,19 @@ const InformationalFeatures: FC<InformationalFeaturesProps> = ({ slice }) => {
 
           {/* ----- Right Column: Subheading + Features ----- */}
           <div className="lg:w-1/2">
-
             {/* Sub-heading */}
             <PrismicRichText
               field={slice.primary.section_subheading}
               components={{
                 heading3: ({ children }) => (
-                  <h3 className="
+                  <h3
+                    className="
                     text-xl sm:text-2xl
                     font-normal text-[#1E3B3D] uppercase tracking-wide
                     mb-8 sm:mb-12 md:mb-16
                     font-sans text-center md:text-left
-                  ">
+                  "
+                  >
                     {children}
                   </h3>
                 ),
@@ -77,23 +78,26 @@ const InformationalFeatures: FC<InformationalFeaturesProps> = ({ slice }) => {
             />
 
             {/* Features Grid */}
-            <div className="
+            <div
+              className="
               grid grid-cols-1
               sm:grid-cols-2
               gap-x-6 md:gap-x-10
               gap-y-6 md:gap-y-10
               mt-6 sm:mt-8 md:mt-30 
-            ">
+            "
+            >
               {slice.primary.features.map((item, index) => (
                 <div key={index}>
-
                   {/* Feature Title */}
                   <div className="flex items-center mb-3">
                     <div className="w-2 h-2 rounded-full bg-[#F6784F] mt-1 mr-3 shrink-0"></div>
-                    <p className="
+                    <p
+                      className="
                       text-lg sm:text-xl
                       leading-none font-normal font-sans uppercase text-[#1E3B3D]
-                    ">
+                    "
+                    >
                       {item.title}
                     </p>
                   </div>

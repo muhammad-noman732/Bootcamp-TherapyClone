@@ -3,7 +3,8 @@ import { Content, asText } from "@prismicio/client";
 import { SliceComponentProps, PrismicRichText } from "@prismicio/react";
 import { PrismicNextImage } from "@prismicio/next";
 
-export type HeadlineStatsProps = SliceComponentProps<Content.HeadlineStatsSlice>;
+export type HeadlineStatsProps =
+  SliceComponentProps<Content.HeadlineStatsSlice>;
 
 const HeadlineStats: FC<HeadlineStatsProps> = ({ slice }) => {
   const headlineText = asText(slice.primary.headline || []);

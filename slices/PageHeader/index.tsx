@@ -25,7 +25,7 @@ const PageHeader: FC<PageHeaderProps> = ({ slice }) => {
               <h1 className="text-4xl md:text-6xl font-normal  leading-wider uppercase text-[#1E3B3D]">
                 {children}
               </h1>
-            ), 
+            ),
           }}
         />
       </div>

@@ -6,7 +6,8 @@ import { PrismicNextImage } from "@prismicio/next";
 /**
  * Props for CaseStudyGrid.
  */
-export type CaseStudyGridProps = SliceComponentProps<Content.CaseStudyGridSlice>;
+export type CaseStudyGridProps =
+  SliceComponentProps<Content.CaseStudyGridSlice>;
 
 /**
  * Component for "CaseStudyGrid" Slices.
@@ -18,7 +19,7 @@ const CaseStudyGrid: FC<CaseStudyGridProps> = ({ slice }) => {
       data-slice-variation={slice.variation}
       className="w-full px-[30px] py-12"
     >
-      {/* ✅ Added mx-auto to center on ultra-wide screens */}
+      {/* Added mx-auto to center on ultra-wide screens */}
       <div className="w-full max-w-[1440px] mx-auto">
         {/* Heading */}
         {slice.primary.heading && (

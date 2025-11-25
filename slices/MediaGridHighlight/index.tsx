@@ -14,7 +14,7 @@ export type MediaGridHighlightProps =
  */
 const MediaGridHighlight: FC<MediaGridHighlightProps> = ({ slice }) => {
   const mediaItems = slice.primary.media_items || [];
-   const [image1, image2, image3, image4] = mediaItems;
+  const [image1, image2, image3, image4] = mediaItems;
 
   return (
     <section
@@ -23,7 +23,6 @@ const MediaGridHighlight: FC<MediaGridHighlightProps> = ({ slice }) => {
       className="bg-[#E7E8EB] py-24 px-[30px]"
     >
       <div className="max-w-7xl mx-auto space-y-4">
-        
         {/* TOP ROW - Fixed widths */}
         <div className="grid gap-6 items-start sm:grid-cols-2 lg:grid-cols-12">
           {/* Image 1 */}
@@ -47,7 +46,7 @@ const MediaGridHighlight: FC<MediaGridHighlightProps> = ({ slice }) => {
               />
             )}
           </div>
-          
+
           {/* Title/Heading - Takes remaining space */}
           <div className="flex items-start justify-start pt-6 lg:pt-0 sm:col-span-2 lg:col-span-4">
             <PrismicRichText
@@ -62,7 +61,7 @@ const MediaGridHighlight: FC<MediaGridHighlightProps> = ({ slice }) => {
             />
           </div>
         </div>
-        
+
         {/* BOTTOM ROW - Fixed widths */}
         <div className="grid gap-4 items-center sm:grid-cols-2 lg:grid-cols-12">
           {/* CTA */}

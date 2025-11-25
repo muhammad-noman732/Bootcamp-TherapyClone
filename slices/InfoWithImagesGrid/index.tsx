@@ -6,9 +6,7 @@ import { Content } from "@prismicio/client";
 export type InfoWithImageSlice =
   SliceComponentProps<Content.InfoWithImagesGridSlice>;
 
-const InformationWithImageGrid: FC<InfoWithImageSlice> = ({
-  slice,
-}) => {
+const InformationWithImageGrid: FC<InfoWithImageSlice> = ({ slice }) => {
   return (
     <section
       data-slice-type={slice.slice_type}

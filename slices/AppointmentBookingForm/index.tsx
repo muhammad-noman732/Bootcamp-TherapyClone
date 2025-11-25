@@ -1,4 +1,3 @@
-
 import { FC } from "react";
 import { PrismicRichText, SliceComponentProps } from "@prismicio/react";
 import { Content, asText } from "@prismicio/client";

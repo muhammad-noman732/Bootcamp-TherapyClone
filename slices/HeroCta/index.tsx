@@ -28,7 +28,6 @@ const HeroCta: FC<HeroCtaProps> = ({ slice }) => {
 
       {/*  Content */}
       <div className="flex flex-col items-center z-10 p-4 ">
-
         {/*  HEADLINE */}
         <PrismicRichText
           field={slice.primary.headline}

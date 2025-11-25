@@ -15,7 +15,6 @@ const FeatureCaseStudy: FC<FeatureCaseStudyProps> = ({ slice }) => {
     >
       {/* CONTAINER: max width 1440px, centered */}
       <div className="w-full max-w-[1440px] mx-auto space-y-8">
-
         {/* ---------- Title ---------- */}
         <PrismicRichText
           field={slice.primary.title}
