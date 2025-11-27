@@ -31,10 +31,12 @@ export default async function Footer() {
         >
           {/* LOGO + SOCIAL ICONS */}
           <div className="flex flex-col items-start gap-6 px-[121px]">
-            <PrismicNextLink field={data.logolink}>
+            <PrismicNextLink field={data.logolink} aria-label="Go to homepage">
               <PrismicNextImage
                 field={data.logoimage}
                 alt=""
+                sizes="(max-width: 640px) 220px, (max-width: 1024px) 260px, 300px"
+                loading="lazy"
                 className="
                   w-[220px] 
                   sm:w-[260px] 
@@ -46,19 +48,25 @@ export default async function Footer() {
             </PrismicNextLink>
 
             <div className="flex items-center gap-4 mt-2">
-              {data.sociaicon.map((item, index) => (
-                <PrismicNextLink
-                  key={index}
-                  field={item.iconlink}
-                  className="inline-flex h-8 w-8 items-center justify-center hover:opacity-70"
-                >
-                  <PrismicNextImage
-                    field={item.icon}
-                    alt=""
-                    className="h-6 w-6 object-contain"
-                  />
-                </PrismicNextLink>
-              ))}
+              {data.sociaicon.map((item, index) => {
+                const socialNames = ['Facebook', 'Twitter', 'Instagram', 'LinkedIn', 'YouTube'];
+                return (
+                  <PrismicNextLink
+                    key={index}
+                    field={item.iconlink}
+                    className="inline-flex h-8 w-8 items-center justify-center hover:opacity-70"
+                    aria-label={`Visit our ${socialNames[index] || 'social media'} page`}
+                  >
+                    <PrismicNextImage
+                      field={item.icon}
+                      alt=""
+                      sizes="24px"
+                      loading="lazy"
+                      className="h-6 w-6 object-contain"
+                    />
+                  </PrismicNextLink>
+                );
+              })}
             </div>
           </div>
 

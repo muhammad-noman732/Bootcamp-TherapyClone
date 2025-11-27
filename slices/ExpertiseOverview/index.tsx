@@ -41,6 +41,8 @@ const ExpertiseOverview: FC<ExpertiseOverviewProps> = ({ slice }) => {
                 <PrismicNextImage
                   field={item.icon}
                   className="w-8 h-8 mb-2"
+                  sizes="32px"
+                  loading="lazy"
                   alt=""
                 />
                 <p className="text-lg font-normal text-[#1E3B3D] font-sans">
@@ -56,6 +58,8 @@ const ExpertiseOverview: FC<ExpertiseOverviewProps> = ({ slice }) => {
             <PrismicNextImage
               field={slice.primary.center_image}
               alt=""
+              sizes="(max-width: 640px) 280px, (max-width: 768px) 400px, 33vw"
+              loading="lazy"
               className="w-full h-full object-cover rounded-md shadow-sm max-w-[280px] sm:max-w-[400px] md:max-w-full"
             />
           </div>
@@ -71,6 +75,8 @@ const ExpertiseOverview: FC<ExpertiseOverviewProps> = ({ slice }) => {
                 <PrismicNextImage
                   field={item.icon}
                   className="w-8 h-8 mb-2"
+                  sizes="32px"
+                  loading="lazy"
                   alt=""
                 />
                 <p className="text-xl font-sans font-normal text-[#1E3B3D]">

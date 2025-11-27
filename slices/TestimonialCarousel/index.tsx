@@ -50,6 +50,8 @@ const TestimonialCarousel: FC<TestimonialCarouselProps> = ({ slice }) => {
           field={currentItem.avatar}
           width={64}
           height={64}
+          sizes="64px"
+          loading="lazy"
           alt=""
           className="rounded-full h-16 w-16 object-cover mb-4"
         />
@@ -75,6 +77,8 @@ const TestimonialCarousel: FC<TestimonialCarouselProps> = ({ slice }) => {
               field={slice.primary.lefta}
               width={40}
               height={40}
+              sizes="40px"
+              loading="lazy"
               className="object-contain"
               alt=""
             />
@@ -93,6 +97,8 @@ const TestimonialCarousel: FC<TestimonialCarouselProps> = ({ slice }) => {
               field={slice.primary.rightarrow}
               width={30}
               height={30}
+              sizes="30px"
+              loading="lazy"
               className="object-contain"
               alt=""
             />
