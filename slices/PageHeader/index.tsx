@@ -15,7 +15,7 @@ const PageHeader: FC<PageHeaderProps> = ({ slice }) => {
     <section
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
-      className="w-full py-30 px-6 text-center bg-linear-to-b from-[#EEDE96] to-transparent"
+      className="w-full pt-30 pb-20 px-6 text-center bg-linear-to-b from-[#EEDE96] to-transparent"
     >
       <div className="max-w-4xl py-10 mx-auto">
         <PrismicRichText

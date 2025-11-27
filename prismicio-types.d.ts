@@ -200,7 +200,10 @@ interface BlogDocumentData {
 export type BlogDocument<Lang extends string = string> =
   prismic.PrismicDocumentWithoutUID<Simplify<BlogDocumentData>, "blog", Lang>;
 
-type BlogsDocumentDataSlicesSlice = MediaEmbed2Slice | FeaturedArticleSlice;
+type BlogsDocumentDataSlicesSlice =
+  | MainTextSlice
+  | MediaEmbed2Slice
+  | FeaturedArticleSlice;
 
 /**
  * Content for Blogs documents
@@ -700,6 +703,7 @@ export type HomepageDocument<Lang extends string = string> =
   >;
 
 type ServicesDocumentDataSlicesSlice =
+  | LogoBarSlice
   | CtaCenteredSlice
   | MediaGridHighlightSlice
   | AppointmentFormSlice
@@ -2650,6 +2654,78 @@ export type HalfMediaContentInfoSlice = prismic.SharedSlice<
 >;
 
 /**
+ * Default variation for Header Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type HeaderSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Record<string, never>,
+  never
+>;
+
+/**
+ * Slice variation for *Header*
+ */
+type HeaderSliceVariation = HeaderSliceDefault;
+
+/**
+ * Header Shared Slice
+ *
+ * - **API ID**: `header`
+ * - **Description**: Header
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type HeaderSlice = prismic.SharedSlice<"header", HeaderSliceVariation>;
+
+/**
+ * Primary content in *Heading → Default → Primary*
+ */
+export interface HeadingSliceDefaultPrimary {
+  /**
+   * mainText field in *Heading → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: heading.default.primary.maintext
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  maintext: prismic.RichTextField;
+}
+
+/**
+ * Default variation for Heading Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type HeadingSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<HeadingSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *Heading*
+ */
+type HeadingSliceVariation = HeadingSliceDefault;
+
+/**
+ * Heading Shared Slice
+ *
+ * - **API ID**: `heading`
+ * - **Description**: Heading
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type HeadingSlice = prismic.SharedSlice<
+  "heading",
+  HeadingSliceVariation
+>;
+
+/**
  * Item in *HeadlineStats → Default → Primary → Statistics*
  */
 export interface HeadlineStatsSliceDefaultPrimaryStatsItem {
@@ -3710,6 +3786,16 @@ export interface IntroFeaturedServicesSliceDefaultPrimary {
   services: prismic.GroupField<
     Simplify<IntroFeaturedServicesSliceDefaultPrimaryServicesItem>
   >;
+
+  /**
+   * bgImage field in *IntroFeaturedServices → Default → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: intro_featured_services.default.primary.bgimage
+   * - **Documentation**: https://prismic.io/docs/fields/image
+   */
+  bgimage: prismic.ImageField<never>;
 }
 
 /**
@@ -3822,6 +3908,51 @@ type LogoBarSliceVariation = LogoBarSliceAsSeenOnLogos;
 export type LogoBarSlice = prismic.SharedSlice<
   "logo_bar",
   LogoBarSliceVariation
+>;
+
+/**
+ * Primary content in *MainText → Default → Primary*
+ */
+export interface MainTextSliceDefaultPrimary {
+  /**
+   * Heading field in *MainText → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: main_text.default.primary.heading
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  heading: prismic.KeyTextField;
+}
+
+/**
+ * Default variation for MainText Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type MainTextSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<MainTextSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *MainText*
+ */
+type MainTextSliceVariation = MainTextSliceDefault;
+
+/**
+ * MainText Shared Slice
+ *
+ * - **API ID**: `main_text`
+ * - **Description**: MainText
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type MainTextSlice = prismic.SharedSlice<
+  "main_text",
+  MainTextSliceVariation
 >;
 
 /**
@@ -4654,6 +4785,26 @@ export interface TestimonialCarouselSliceDefaultPrimary {
   testimonials: prismic.GroupField<
     Simplify<TestimonialCarouselSliceDefaultPrimaryTestimonialsItem>
   >;
+
+  /**
+   * leftArrow  field in *TestimonialCarousel → Default → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: testimonial_carousel.default.primary.lefta
+   * - **Documentation**: https://prismic.io/docs/fields/image
+   */
+  lefta: prismic.ImageField<never>;
+
+  /**
+   * rightArrow field in *TestimonialCarousel → Default → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: testimonial_carousel.default.primary.rightarrow
+   * - **Documentation**: https://prismic.io/docs/fields/image
+   */
+  rightarrow: prismic.ImageField<never>;
 }
 
 /**
@@ -5078,6 +5229,13 @@ declare module "@prismicio/client" {
       HalfMediaContentInfoSliceImageLeftContentRightPrimary,
       HalfMediaContentInfoSliceVariation,
       HalfMediaContentInfoSliceImageLeftContentRight,
+      HeaderSlice,
+      HeaderSliceVariation,
+      HeaderSliceDefault,
+      HeadingSlice,
+      HeadingSliceDefaultPrimary,
+      HeadingSliceVariation,
+      HeadingSliceDefault,
       HeadlineStatsSlice,
       HeadlineStatsSliceDefaultPrimaryStatsItem,
       HeadlineStatsSliceDefaultPrimary,
@@ -5136,6 +5294,10 @@ declare module "@prismicio/client" {
       LogoBarSliceAsSeenOnLogosPrimary,
       LogoBarSliceVariation,
       LogoBarSliceAsSeenOnLogos,
+      MainTextSlice,
+      MainTextSliceDefaultPrimary,
+      MainTextSliceVariation,
+      MainTextSliceDefault,
       MediaEmbed2Slice,
       MediaEmbed2SliceDefaultPrimaryItemsItem,
       MediaEmbed2SliceDefaultPrimary,

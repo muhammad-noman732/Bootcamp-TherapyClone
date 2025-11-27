@@ -4,7 +4,7 @@ import dynamic from "next/dynamic";
 
 export const components = {
   appointment_booking_form: dynamic(() => import("./AppointmentBookingForm")),
-  // appointment_form: dynamic(() => import("./AppointmentForm")),
+
   approach_overview: dynamic(() => import("./ApproachOverview")),
   card_grid: dynamic(() => import("./CardGrid")),
   case_study_grid: dynamic(() => import("./CaseStudyGrid")),
@@ -17,9 +17,11 @@ export const components = {
   feature_list_image: dynamic(() => import("./FeatureListImage")),
   featured_article: dynamic(() => import("./FeaturedArticle")),
   featured_article_with_list: dynamic(
-    () => import("./FeaturedArticleWithList")
+    () => import("./FeaturedArticleWithList"),
   ),
   half_media_content_info: dynamic(() => import("./HalfMediaContentInfo")),
+  header: dynamic(() => import("./Header")),
+  heading: dynamic(() => import("./Heading")),
   headline_stats: dynamic(() => import("./HeadlineStats")),
   hero_cta: dynamic(() => import("./HeroCta")),
   hero_with_bg_image: dynamic(() => import("./HeroWithBgImage")),
@@ -32,6 +34,7 @@ export const components = {
   informational_features: dynamic(() => import("./InformationalFeatures")),
   intro_featured_services: dynamic(() => import("./IntroFeaturedServices")),
   logo_bar: dynamic(() => import("./LogoBar")),
+  main_text: dynamic(() => import("./MainText")),
   media_embed_2: dynamic(() => import("./MediaEmbed2")),
   media_grid_highlight: dynamic(() => import("./MediaGridHighlight")),
   page_header: dynamic(() => import("./PageHeader")),

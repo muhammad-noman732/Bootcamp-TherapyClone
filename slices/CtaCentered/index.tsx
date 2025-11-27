@@ -1,14 +1,18 @@
+"use client"
 import { FC } from "react";
 import { Content } from "@prismicio/client";
 import { PrismicRichText, SliceComponentProps } from "@prismicio/react";
 import { PrismicNextLink } from "@prismicio/next";
-
+ import { usePathname } from 'next/navigation'
 export type CtaCenteredProps = SliceComponentProps<Content.CtaCenteredSlice>;
 
 const CtaCentered: FC<CtaCenteredProps> = ({ slice }) => {
+  const pathname=usePathname()
+  console.log(pathname)
+
   return (
     <section
-      className="bg-[#EEDE96] py-20 "
+      className={`${pathname==="/"?"bg-[#EEDE96]":""} py-20 `}
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
     >

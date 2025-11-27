@@ -1,6 +1,7 @@
 import { createClient } from "@/prismicio";
 import { PrismicNextLink, PrismicNextImage } from "@prismicio/next";
 import { PrismicRichText } from "@prismicio/react";
+import FooterLinks from "./FooterLinks";
 
 export default async function Footer() {
   const client = createClient();
@@ -67,22 +68,7 @@ export default async function Footer() {
               Quick Links
             </h4>
 
-            <div className="flex flex-col gap-2">
-              {data.quicklinks.map((item, index) => (
-                <PrismicNextLink
-                  key={index}
-                  field={item.link}
-                  className="
-                    text-[16px]
-                    text-[#1E3B3D]
-                    hover:text-[#F6784F]
-                    transition-colors
-                  "
-                >
-                  {item.lable}
-                </PrismicNextLink>
-              ))}
-            </div>
+            <FooterLinks links={data.quicklinks} />
           </div>
         </div>
 

@@ -100,9 +100,9 @@ export default async function TwinglyPosts({
               <div className="pt-4">
                 <div className="flex items-center justify-between">
                   <span className="text-base font-normal bg-[#F6784F] text-white px-2 py-0.5 font-poppin">
-                    {post.tags[0] || "General"}
+                    {post.tags[0]?.split(" ")[0] || "General"}
                   </span>
-                  <span className="text-base font-normal text-[#445152] font-poppin">
+                  <span className="text-base font-normal text-[#445152] line-clamp-2 font-poppin">
                     {new Date(post.published_at).toLocaleDateString("en-US", {
                       month: "long",
                       day: "numeric",

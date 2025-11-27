@@ -1,18 +1,46 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { PrismicNextImage, PrismicNextLink } from "@prismicio/next";
+import { usePathname } from "next/navigation";
 import clsx from "clsx";
 import { Menu, X } from "lucide-react";
+import { asLink } from "@prismicio/client";
 
 function HeaderContent({ settings, color }: any) {
   const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const pathname = usePathname();
 
-  // from first code (correct hover brand color)
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  // Determine effective text color
+  // If scrolled, text is black (on white bg). If not, use the prop color.
+  const effectiveColor = isScrolled ? "black" : color;
   const hoverColorClass = "hover:text-[#F6784F]";
 
   return (
-    <header className="fixed top-0 left-0 w-full z-50 bg-transparent">
+    <header
+      className={clsx(
+        "fixed top-0 left-0 w-full z-50 transition-all duration-300",
+        isScrolled
+          ? "bg-white/90 backdrop-blur-md shadow-sm"
+          : color === "white"
+            ? "bg-gradient-to-b from-black/60 via-black/20 to-transparent"
+            : "bg-transparent"
+      )}
+    >
       <div
         className={clsx(`
           max-w-[1440px] mx-auto 
@@ -35,7 +63,7 @@ function HeaderContent({ settings, color }: any) {
                   lg:w-[168px]
                   md:w-[130px]
                   `,
-                  color === "white" ? "invert-0" : "invert"
+                  effectiveColor === "white" ? "invert-0" : "invert"
                 )}
                 alt=""
               />
@@ -60,25 +88,31 @@ function HeaderContent({ settings, color }: any) {
               md:text-[14px]
             `)}
           >
-            {settings.data.navigation.map(({ label, link }: any) => (
-              <li key={label}>
-                <PrismicNextLink
-                  field={link}
-                  className={clsx(
-                    `
-                    font-poppins font-normal transition-colors duration-200
+            {settings.data.navigation.map(({ label, link }: any) => {
+              const linkUrl = asLink(link);
+              const isActive = pathname === linkUrl;
+
+              return (
+                <li key={label}>
+                  <PrismicNextLink
+                    field={link}
+                    className={clsx(
+                      `
+                    font-poppins transition-colors duration-200
                     leading-[24px]
                     lg:text-[16px]
                     md:text-[14px]
                     `,
-                    hoverColorClass,
-                    color === "white" ? "text-white" : "text-black"
-                  )}
-                >
-                  {label}
-                </PrismicNextLink>
-              </li>
-            ))}
+                      isActive
+                        ? "font-bold text-[#F6784F]"
+                        : ["font-normal", hoverColorClass, effectiveColor === "white" ? "text-white" : "text-black"]
+                    )}
+                  >
+                    {label}
+                  </PrismicNextLink>
+                </li>
+              );
+            })}
           </ul>
         </nav>
 
@@ -102,7 +136,7 @@ function HeaderContent({ settings, color }: any) {
                 md:px-3 md:py-1 md:text-[13px]
                 leading-[24px]
                 `,
-                color === "white"
+                effectiveColor === "white"
                   ? "text-white hover:text-gray-300"
                   : "text-black " + hoverColorClass
               )}
@@ -115,7 +149,7 @@ function HeaderContent({ settings, color }: any) {
                     `
                     mr-2 object-contain
                     `,
-                    color === "white"
+                    effectiveColor === "white"
                       ? "brightness-0 invert"
                       : "brightness-0 invert-0"
                   )}
@@ -136,8 +170,7 @@ function HeaderContent({ settings, color }: any) {
           <Menu
             className={clsx(
               "w-7 h-7",
-              // first code logic
-              color === "white" ? "text-white" : "text-black"
+              effectiveColor === "white" ? "text-white" : "text-black"
             )}
           />
         </button>
@@ -163,17 +196,23 @@ function HeaderContent({ settings, color }: any) {
 
             <nav className="flex-1">
               <ul className="flex flex-col space-y-4">
-                {settings.data.navigation.map(({ label, link }: any) => (
-                  <li key={label}>
-                    <PrismicNextLink
-                      field={link}
-                      className="block text-lg font-medium text-gray-800 hover:text-[#F6784F] transition"
-                      onClick={() => setIsOpen(false)}
-                    >
-                      {label}
-                    </PrismicNextLink>
-                  </li>
-                ))}
+                {settings.data.navigation.map(({ label, link }: any) => {
+                  const linkUrl = asLink(link);
+                  const isActive = pathname === linkUrl;
+                  return (
+                    <li key={label}>
+                      <PrismicNextLink
+                        field={link}
+                        className={clsx(
+                          isActive ? "font-bold text-[#F6784F]" : "font-medium text-gray-800 hover:text-[#F6784F]"
+                        )}
+                        onClick={() => setIsOpen(false)}
+                      >
+                        {label}
+                      </PrismicNextLink>
+                    </li>
+                  )
+                })}
               </ul>
             </nav>
 

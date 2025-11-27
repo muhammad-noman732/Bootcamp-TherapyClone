@@ -37,8 +37,25 @@
               }
             }
           }
+        },
+        "lefta": {
+          "type": "Image",
+          "config": {
+            "label": "leftArrow ",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "rightarrow": {
+          "type": "Image",
+          "config": {
+            "label": "rightArrow",
+            "constraint": {},
+            "thumbnails": []
+          }
         }
-      }
+      },
+      "items": {}
     }
   ]
 }

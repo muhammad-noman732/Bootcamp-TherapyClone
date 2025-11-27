@@ -30,11 +30,10 @@ const TeamGrid: FC<TeamGridProps> = ({ slice }) => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
           {slice.primary.people.map((item, index) => (
             <div key={index} className="flex flex-col">
-              {/* IMAGE (CENTERED, SMALLER) */}
               <div className="relative w-full flex justify-center">
                 <PrismicNextImage
                   field={item.photo}
-                  className="w-[86%] h-64 object-cover max-w-[300px]"
+                  className=" h-[212px] object-cover w-[217px]"
                   alt=""
                 />
               </div>
@@ -42,10 +41,10 @@ const TeamGrid: FC<TeamGridProps> = ({ slice }) => {
               {/* WHITE BOX */}
               <div className="bg-white shadow-lg pt-8 pb-6 px-6 text-center -mt-10 relative w-full">
                 {/* LEFT BORDER */}
-                <div className="absolute top-0 left-[0%] -translate-y-10 h-10 w-[26px] bg-white" />
+                <div className="absolute top-0 left-[0%] -translate-y-10 h-10 w-10 bg-white" />
 
                 {/* RIGHT BORDER */}
-                <div className="absolute top-0 right-[0%] -translate-y-10 h-10 w-[26px] bg-white" />
+                <div className="absolute top-0 right-[0%] -translate-y-10 h-10 w-10 bg-white" />
 
                 {/* NAME */}
                 <p className="font-semibold font-sans text-[#1E3B3D] uppercase tracking-wider text-xl">

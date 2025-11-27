@@ -11,6 +11,9 @@
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
+            "main_text": {
+              "type": "SharedSlice"
+            },
             "media_embed_2": {
               "type": "SharedSlice"
             },

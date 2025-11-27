@@ -86,8 +86,17 @@
               }
             }
           }
+        },
+        "bgimage": {
+          "type": "Image",
+          "config": {
+            "label": "bgImage",
+            "constraint": {},
+            "thumbnails": []
+          }
         }
-      }
+      },
+      "items": {}
     }
   ]
 }
