@@ -86,7 +86,6 @@ export default async function TwinglyPosts({
         {paginatedPosts.map((post) => (
           <Link key={post.id} href="/blogs" className="block">
             <article className="flex flex-col overflow-hidden cursor-pointer hover:opacity-90 transition">
-              {/* Image */}
               <div className="relative w-full aspect-6/3">
                 <Image
                   src={post.images.length > 0 ? post.images[0] : "/blog.svg"}
@@ -96,7 +95,6 @@ export default async function TwinglyPosts({
                 />
               </div>
 
-              {/* Content */}
               <div className="pt-4">
                 <div className="flex items-center justify-between">
                   <span className="text-base font-normal bg-[#F6784F] text-white px-2 py-0.5 font-poppin">
@@ -120,30 +118,50 @@ export default async function TwinglyPosts({
         ))}
       </div>
 
-      {/* Pagination */}
-      <div className="flex justify-center  items-center gap-3 mt-12">
-        {page > 1 && (
-          <Link
-            href={`?page=${page - 1}`}
-            className="px-5 py-2 bg-[#EEDE96]  hover:bg-yellow-500 transition text-base text-white font-medium"
-          >
-            ← Previous
-          </Link>
-        )}
+    {/* Pagination */}
+<div className="flex justify-between items-center mt-12 w-full relative">
 
-        <span className="text-[#445152] text-base font-poppin">
-          {page} / {totalPages || 1}
-        </span>
+  {/* LEFT: Previous or placeholder */}
+  <div className="w-[426.66px] h-[51.18px] flex items-center">
+    {page > 1 ? (
+      <Link
+        href={`?page=${page - 1}`}
+        className="bg-[#EEDE96] text-[#1E3B3D] text-base font-medium transition 
+        w-[426.66px] h-[51.18px] flex items-center justify-center"
+      >
+        Previous
+      </Link>
+    ) : (
+      // Empty placeholder
+      <div className="w-[426.66px] h-[51.18px]"></div>
+    )}
+  </div>
 
-        {page < totalPages && (
-          <Link
-            href={`?page=${page + 1}`}
-            className="px-5 py-2 bg-[#EEDE96] text-white  hover:bg-yellow-500 transition text-base font-medium"
-          >
-            Next →
-          </Link>
-        )}
-      </div>
+  {/* CENTER: Page Indicator */}
+  <div className="absolute left-1/2 -translate-x-1/2">
+    <span className="text-[#445152] text-base font-poppin">
+      {page} / {totalPages || 1}
+    </span>
+  </div>
+
+  {/* RIGHT: Next or placeholder */}
+  <div className="w-[426.66px] h-[51.18px] flex items-center justify-end">
+    {page < totalPages ? (
+      <Link
+        href={`?page=${page + 1}`}
+        className="bg-[#EEDE96] text-[#1E3B3D] text-base font-medium transition 
+        w-[426.66px] h-[51.18px] flex items-center justify-center"
+      >
+        Next →
+      </Link>
+    ) : (
+      // Empty placeholder
+      <div className="w-[426.66px] h-[51.18px]"></div>
+    )}
+  </div>
+
+</div>
+
     </section>
   );
 }
