@@ -119,44 +119,39 @@ export default async function TwinglyPosts({
       </div>
 
 
-      <div className="flex justify-between items-center mt-12 w-full relative">
+      <div className="flex justify-center lg:justify-between items-center mt-12 w-full relative gap-4 lg:gap-0">
 
-
-        <div className="w-[426.66px] h-[51.18px] flex items-center">
+        <div className="w-auto lg:w-[426.66px] h-[40px] lg:h-[51.18px] flex items-center">
           {page > 1 ? (
             <Link
               href={`?page=${page - 1}`}
-              className="bg-[#EEDE96] text-[#1E3B3D] text-base font-medium transition
-        w-[426.66px] h-[51.18px] flex items-center justify-center"
+              className="bg-[#EEDE96] text-[#1E3B3D] text-sm lg:text-base font-medium transition
+        px-4 lg:px-0 w-auto lg:w-full h-full flex items-center justify-center whitespace-nowrap"
             >
               Previous
             </Link>
           ) : (
-
-            <div className="w-[426.66px] h-[51.18px]"></div>
+            <div className="hidden lg:block lg:w-full h-full"></div>
           )}
         </div>
 
-
-        <div className="absolute left-1/2 -translate-x-1/2">
-          <span className="text-[#445152] text-base font-poppin">
+        <div className="relative lg:absolute lg:left-1/2 lg:-translate-x-1/2">
+          <span className="text-[#445152] text-sm lg:text-base font-poppin whitespace-nowrap">
             {page} / {totalPages || 1}
           </span>
         </div>
 
-
-        <div className="w-[426.66px] h-[51.18px] flex items-center justify-end">
+        <div className="w-auto lg:w-[426.66px] h-[40px] lg:h-[51.18px] flex items-center justify-end">
           {page < totalPages ? (
             <Link
               href={`?page=${page + 1}`}
-              className="bg-[#EEDE96] text-[#1E3B3D] text-base font-medium transition
-        w-[426.66px] h-[51.18px] flex items-center justify-center"
+              className="bg-[#EEDE96] text-[#1E3B3D] text-sm lg:text-base font-medium transition
+        px-4 lg:px-0 w-auto lg:w-full h-full flex items-center justify-center whitespace-nowrap"
             >
               Next →
             </Link>
           ) : (
-
-            <div className="w-[426.66px] h-[51.18px]"></div>
+            <div className="hidden lg:block lg:w-full h-full"></div>
           )}
         </div>
 
