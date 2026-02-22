@@ -16,9 +16,9 @@
     "@prismicio/react": "^3.2.2",
     "clsx": "^2.1.1",
     "lucide-react": "^0.553.0",
-    "next": "16.0.1",
-    "react": "19.2.0",
-    "react-dom": "19.2.0",
+    "next": "^16.1.6",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
     "xml2js": "^0.6.2"
   },
   "devDependencies": {
@@ -30,7 +30,7 @@
     "@types/react-dom": "^19",
     "cross-env": "^7.0.3",
     "eslint": "^9",
-    "eslint-config-next": "16.0.1",
+    "eslint-config-next": "^16.1.6",
     "slice-machine-ui": "^2.19.1",
     "tailwindcss": "^4",
     "typescript": "^5"
