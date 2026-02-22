@@ -13,9 +13,7 @@ const FeatureCaseStudy: FC<FeatureCaseStudyProps> = ({ slice }) => {
       data-slice-variation={slice.variation}
       className="bg-[linear-gradient(180deg,#1E3B3D_0%,#C3C7C8_50%,#FFFFFF_100%)] py-16 px-4 sm:px-6"
     >
-      {/* CONTAINER: max width 1440px, centered */}
       <div className="w-full max-w-[1440px] mx-auto space-y-8">
-        {/* ---------- Title ---------- */}
         <PrismicRichText
           field={slice.primary.title}
           components={{
@@ -27,7 +25,6 @@ const FeatureCaseStudy: FC<FeatureCaseStudyProps> = ({ slice }) => {
           }}
         />
 
-        {/* ---------- Subtitle / Description ---------- */}
         <PrismicRichText
           field={slice.primary.subtitle}
           components={{
@@ -39,7 +36,6 @@ const FeatureCaseStudy: FC<FeatureCaseStudyProps> = ({ slice }) => {
           }}
         />
 
-        {/* ---------- Image ---------- */}
         <div className="w-full flex justify-center mt-10">
           <div className="w-full max-w-[1380px]">
             <PrismicNextImage
@@ -50,7 +46,6 @@ const FeatureCaseStudy: FC<FeatureCaseStudyProps> = ({ slice }) => {
           </div>
         </div>
 
-        {/* ---------- Meta Info Boxes ---------- */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-10 px-2 sm:px-0 max-w-[1380px] mx-auto">
           {slice.primary.meta_info.map((item, idx) => (
             <div
@@ -72,3 +67,4 @@ const FeatureCaseStudy: FC<FeatureCaseStudyProps> = ({ slice }) => {
 };
 
 export default FeatureCaseStudy;
+

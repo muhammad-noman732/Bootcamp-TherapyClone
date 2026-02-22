@@ -16,7 +16,7 @@ const HeroWithOverlay: FC<HeroWithOverlayProps> = ({ slice }) => {
       data-slice-variation={slice.variation}
       className="relative w-full min-h-[750px] md:min-h-screen"
     >
-      {/* Background Image */}
+
       <PrismicNextImage
         field={media}
         fill={true}
@@ -25,12 +25,12 @@ const HeroWithOverlay: FC<HeroWithOverlayProps> = ({ slice }) => {
         alt=""
       />
 
-      {/* Overlay */}
+
       <div className="absolute inset-0 z-10 bg-linear-to-t from-[#1E3B3D] from-33% to-[#1E3B3D]/0 to-100%" />
 
-      {/* Content Container */}
+
       <div className="absolute inset-0 z-20 flex flex-col justify-center px-4 text-white text-center gap-8 md:px-8 max-w-[1440px] mx-auto">
-        {/* Headline */}
+
         <div className="flex flex-col items-center justify-center gap-4 md:items-center md:text-center">
           <PrismicRichText
             field={subtitle}
@@ -54,7 +54,7 @@ const HeroWithOverlay: FC<HeroWithOverlayProps> = ({ slice }) => {
           />
         </div>
 
-        {/* Label & Description */}
+
         <div className="flex flex-col gap-6 px-4 mx-auto w-full md:flex-row md:items-start md:justify-between">
           {follow_label && (
             <div className="md:flex-1 md:text-left md:pt-6 mb-5 md:mb-0">
@@ -80,10 +80,11 @@ const HeroWithOverlay: FC<HeroWithOverlayProps> = ({ slice }) => {
         </div>
       </div>
 
-      {/* Small screen padding bottom to avoid overlap with next slice */}
+
       <div className="block md:hidden h-20" />
     </section>
   );
 };
 
 export default HeroWithOverlay;
+

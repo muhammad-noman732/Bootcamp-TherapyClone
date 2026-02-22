@@ -10,10 +10,11 @@ export default  async function Home() {
   return (
     <div>
       <Header color="white"/>
-      
+
         <main>
         <SliceZone slices={page.data.slices} components={components} />
       </main>
     </div>
   );
 }
+

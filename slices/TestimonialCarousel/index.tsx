@@ -6,15 +6,11 @@ import { SliceComponentProps } from "@prismicio/react";
 import { PrismicNextImage } from "@prismicio/next";
 import { PrismicRichText } from "@prismicio/react";
 
-/**
- * Props for `TestimonialCarousel`.
- */
+
 export type TestimonialCarouselProps =
   SliceComponentProps<Content.TestimonialCarouselSlice>;
 
-/**
- * Component for "TestimonialCarousel" Slices.
- */
+
 const TestimonialCarousel: FC<TestimonialCarouselProps> = ({ slice }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const testimonials = slice.primary.testimonials;
@@ -31,7 +27,7 @@ const TestimonialCarousel: FC<TestimonialCarouselProps> = ({ slice }) => {
     }
   };
 
-  // Guard clause if no testimonials exist
+
   if (!testimonials || testimonials.length === 0) {
     return null;
   }
@@ -45,7 +41,7 @@ const TestimonialCarousel: FC<TestimonialCarouselProps> = ({ slice }) => {
       className="py-20 px-4 md:px-6 max-w-5xl mx-auto text-center"
     >
       <div className="flex flex-col items-center">
-        {/* AVATAR IMAGE */}
+
         <PrismicNextImage
           field={currentItem.avatar}
           width={64}
@@ -62,7 +58,7 @@ const TestimonialCarousel: FC<TestimonialCarouselProps> = ({ slice }) => {
           <PrismicRichText field={currentItem.testimonial_text} />
         </div>
 
-        {/* NAVIGATION ARROWS */}
+
         <div className="flex items-center justify-center gap-15 mt-10 w-full">
           <button
             onClick={handlePrev}
@@ -110,3 +106,4 @@ const TestimonialCarousel: FC<TestimonialCarouselProps> = ({ slice }) => {
 };
 
 export default TestimonialCarousel;
+

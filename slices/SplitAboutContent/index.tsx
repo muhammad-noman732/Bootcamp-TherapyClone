@@ -18,11 +18,11 @@ const SplitAboutContent: FC<SplitAboutContentProps> = ({ slice }) => {
       data-slice-variation={slice.variation}
       className="bg-[#1E3B3D] w-full text-white font-sans pb-10"
     >
-      {/* ---------- Centered Container ---------- */}
+
       <div className="max-w-[1440px] mx-auto w-full px-[30px] min-h-screen flex flex-col space-y-5">
-        {/* TOP ROW */}
+
         <div className="flex flex-wrap justify-between items-center gap-y-10 lg:gap-x-10 pt-8 lg:pt-16">
-          {/* Left Image */}
+
           <div className="flex-shrink-0 w-full sm:w-[30%] md:w-[25%] lg:w-[300px] h-auto">
             <PrismicNextImage
               field={slice.primary.image_top_left}
@@ -31,7 +31,7 @@ const SplitAboutContent: FC<SplitAboutContentProps> = ({ slice }) => {
             />
           </div>
 
-          {/* Center Icon + Heading */}
+
           <div className="flex flex-col items-center text-center flex-1 mx-auto lg:mx-8 min-w-[220px]">
             <PrismicNextImage
               field={icon}
@@ -52,7 +52,7 @@ const SplitAboutContent: FC<SplitAboutContentProps> = ({ slice }) => {
             />
           </div>
 
-          {/* Right Image */}
+
           <div className="flex-shrink-0 w-full sm:w-[30%] md:w-[25%] lg:w-[300px] h-auto mt-6 lg:mt-0">
             <PrismicNextImage
               field={slice.primary.imagetopright}
@@ -62,9 +62,9 @@ const SplitAboutContent: FC<SplitAboutContentProps> = ({ slice }) => {
           </div>
         </div>
 
-        {/* BOTTOM ROW */}
+
         <div className="flex flex-wrap justify-between items-start gap-y-10 lg:gap-x-10 mt-16">
-          {/* Bottom Left Image */}
+
           <div className="flex-shrink-0 w-full sm:w-[28%] md:w-[25%] lg:w-[280px] h-auto">
             <PrismicNextImage
               field={slice.primary.imagebottomleft}
@@ -73,7 +73,7 @@ const SplitAboutContent: FC<SplitAboutContentProps> = ({ slice }) => {
             />
           </div>
 
-          {/* Text Blocks (Story + Mission) */}
+
           {textBlocks.map((item, index) => {
             const isStory = index === 0;
             return (
@@ -103,7 +103,7 @@ const SplitAboutContent: FC<SplitAboutContentProps> = ({ slice }) => {
             );
           })}
 
-          {/* Bottom Right Image */}
+
           <div className="flex-shrink-0 w-full sm:w-[28%] md:w-[25%] lg:w-[280px] h-auto mt-6 lg:mt-14">
             <PrismicNextImage
               field={slice.primary.imagebottomright}
@@ -118,3 +118,4 @@ const SplitAboutContent: FC<SplitAboutContentProps> = ({ slice }) => {
 };
 
 export default SplitAboutContent;
+

@@ -10,7 +10,7 @@ export default async function Footer() {
 
   return (
     <footer className="w-full bg-white">
-      {/* WRAPPER – max width 1440px */}
+
       <div
         className="
           max-w-[1440px]
@@ -20,7 +20,7 @@ export default async function Footer() {
           sm:px-10
         "
       >
-        {/* TOP SECTION */}
+
         <div
           className="
             flex flex-col lg:flex-row
@@ -29,17 +29,17 @@ export default async function Footer() {
             gap-12
           "
         >
-          {/* LOGO + SOCIAL ICONS */}
+
           <div className="flex flex-col items-start gap-6 px-[121px]">
             <PrismicNextLink field={data.logolink}>
               <PrismicNextImage
                 field={data.logoimage}
                 alt=""
                 className="
-                  w-[220px] 
-                  sm:w-[260px] 
-                  lg:w-[300px] 
-                  object-contain 
+                  w-[220px]
+                  sm:w-[260px]
+                  lg:w-[300px]
+                  object-contain
                   brightness-0
                 "
               />
@@ -62,7 +62,7 @@ export default async function Footer() {
             </div>
           </div>
 
-          {/* QUICK LINKS */}
+
           <div className="mx-auto text-center lg:mx-0 lg:text-left lg:mr-[285px]">
             <h4 className="text-[16px] font-semibold text-[#1E3B3D] mb-3">
               Quick Links
@@ -72,10 +72,10 @@ export default async function Footer() {
           </div>
         </div>
 
-        {/* DIVIDER */}
+
         <hr className="my-10 border-[#CFCFCF]" />
 
-        {/* CONTACT SECTION */}
+
         <div
           className="
             flex flex-col md:flex-row
@@ -86,7 +86,7 @@ export default async function Footer() {
             text-[#1E3B3D]
           "
         >
-          {/* ADDRESS */}
+
           <div className="flex items-start gap-2 md:w-1/3">
             <span className="font-semibold text-[#F6784F]">A:</span>
             <div className="leading-relaxed">
@@ -94,7 +94,7 @@ export default async function Footer() {
             </div>
           </div>
 
-          {/* PHONE */}
+
           <div className="flex items-start gap-2 md:justify-center md:w-1/3">
             <span className="font-semibold text-[#F6784F]">P:</span>
             <div className="leading-relaxed">
@@ -102,7 +102,7 @@ export default async function Footer() {
             </div>
           </div>
 
-          {/* EMAIL */}
+
           <div className="flex items-start gap-2 md:justify-end md:w-1/3">
             <span className="font-semibold text-[#F6784F]">M:</span>
             <div className="leading-relaxed">
@@ -114,3 +114,4 @@ export default async function Footer() {
     </footer>
   );
 }
+

@@ -12,9 +12,9 @@ const TeamGrid: FC<TeamGridProps> = ({ slice }) => {
       data-slice-variation={slice.variation}
       className="w-full py-16 px-6 bg-[linear-gradient(90deg,rgba(246,120,79,0)_0%,rgba(246,120,79,0.1)_13%,rgba(246,120,79,0.3)_25%,rgba(246,120,79,0.4)_38%,rgba(246,120,79,0.5)_50%,rgba(246,120,79,0.4)_63%,rgba(250,186,165,0.3)_75%,rgba(246,120,79,0.1)_88%,rgba(246,120,79,0)_100%)]"
     >
-      {/* CENTERED CONTAINER */}
+
       <div className="max-w-[1440px] mx-auto w-full">
-        {/* HEADER */}
+
         <div className="flex flex-wrap items-center justify-between gap-4 mb-12 md:px-10">
           <div className="text-2xl sm:text-3xl md:text-4xl font-semibold text-[#1E3B3D]">
             <PrismicRichText field={slice.primary.title} />
@@ -26,7 +26,7 @@ const TeamGrid: FC<TeamGridProps> = ({ slice }) => {
           />
         </div>
 
-        {/* GRID */}
+
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
           {slice.primary.people.map((item, index) => (
             <div key={index} className="flex flex-col">
@@ -38,25 +38,25 @@ const TeamGrid: FC<TeamGridProps> = ({ slice }) => {
                 />
               </div>
 
-              {/* WHITE BOX */}
+
               <div className="bg-white shadow-lg pt-8 pb-6 px-6 text-center -mt-10 relative w-full">
-                {/* LEFT BORDER */}
+
                 <div className="absolute top-0 left-[0%] -translate-y-10 h-10 w-10 bg-white" />
 
-                {/* RIGHT BORDER */}
+
                 <div className="absolute top-0 right-[0%] -translate-y-10 h-10 w-10 bg-white" />
 
-                {/* NAME */}
+
                 <p className="font-semibold font-sans text-[#1E3B3D] uppercase tracking-wider text-xl">
                   {item.name}
                 </p>
 
-                {/* ROLE */}
+
                 <p className="text-base text-[#445152] mt-1 mb-3 font-poppin font-normal">
                   {item.role}
                 </p>
 
-                {/* SOCIAL LINKS */}
+
                 <div className="flex justify-center gap-6 flex-wrap">
                   {item.social_links.map((link, i) => (
                     <PrismicNextLink
@@ -79,3 +79,4 @@ const TeamGrid: FC<TeamGridProps> = ({ slice }) => {
 };
 
 export default TeamGrid;
+

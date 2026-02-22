@@ -3,15 +3,11 @@ import { Content } from "@prismicio/client";
 import { PrismicRichText, SliceComponentProps } from "@prismicio/react";
 import { PrismicNextImage } from "@prismicio/next";
 
-/**
- * Props for `InformationalFeatures`.
- */
+
 export type InformationalFeaturesProps =
   SliceComponentProps<Content.InformationalFeaturesSlice>;
 
-/**
- * Component for "InformationalFeatures" Slices.
- */
+
 const InformationalFeatures: FC<InformationalFeaturesProps> = ({ slice }) => {
   return (
     <section
@@ -19,9 +15,9 @@ const InformationalFeatures: FC<InformationalFeaturesProps> = ({ slice }) => {
       data-slice-variation={slice.variation}
       className="py-8 sm:py-12 md:py-16 px-4 md:px-9 lg:px-0"
     >
-      {/* Main Container */}
+
       <div className="max-w-7xl mx-auto">
-        {/* ---------- Main Heading ---------- */}
+
         <PrismicRichText
           field={slice.primary.section_heading}
           components={{
@@ -42,9 +38,9 @@ const InformationalFeatures: FC<InformationalFeaturesProps> = ({ slice }) => {
           }}
         />
 
-        {/* ---------- Two-Column Layout ---------- */}
+
         <div className="flex flex-col lg:flex-row gap-8 md:gap-10">
-          {/* ----- Left Column: Image ----- */}
+
           <div className="lg:w-1/2">
             <PrismicNextImage
               field={slice.primary.main_image}
@@ -56,9 +52,9 @@ const InformationalFeatures: FC<InformationalFeaturesProps> = ({ slice }) => {
             />
           </div>
 
-          {/* ----- Right Column: Subheading + Features ----- */}
+
           <div className="lg:w-1/2">
-            {/* Sub-heading */}
+
             <PrismicRichText
               field={slice.primary.section_subheading}
               components={{
@@ -77,19 +73,19 @@ const InformationalFeatures: FC<InformationalFeaturesProps> = ({ slice }) => {
               }}
             />
 
-            {/* Features Grid */}
+
             <div
               className="
               grid grid-cols-1
               sm:grid-cols-2
               gap-x-6 md:gap-x-10
               gap-y-6 md:gap-y-10
-              mt-6 sm:mt-8 md:mt-30 
+              mt-6 sm:mt-8 md:mt-30
             "
             >
               {slice.primary.features.map((item, index) => (
                 <div key={index}>
-                  {/* Feature Title */}
+
                   <div className="flex items-center mb-3">
                     <div className="w-2 h-2 rounded-full bg-[#F6784F] mt-1 mr-3 shrink-0"></div>
                     <p
@@ -102,7 +98,7 @@ const InformationalFeatures: FC<InformationalFeaturesProps> = ({ slice }) => {
                     </p>
                   </div>
 
-                  {/* Feature Description */}
+
                   <PrismicRichText
                     field={item.description}
                     components={{
@@ -124,3 +120,4 @@ const InformationalFeatures: FC<InformationalFeaturesProps> = ({ slice }) => {
 };
 
 export default InformationalFeatures;
+

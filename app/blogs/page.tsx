@@ -11,9 +11,9 @@ export default async function Blogs({ searchParams }: BlogPageProps) {
   const client = createClient();
   const page = await client.getSingle("blogs");
 
-  // resolve params
+
   const resolvedSearchParams = await searchParams;
-  // get the current page from searchparams
+
   const currentPage = parseInt(resolvedSearchParams.page || "1", 10);
 
   const apiKey = process.env.TWINGLY_BLOG_API;
@@ -30,3 +30,4 @@ export default async function Blogs({ searchParams }: BlogPageProps) {
     </div>
   );
 }
+

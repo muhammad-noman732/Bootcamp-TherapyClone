@@ -13,9 +13,9 @@ const ExpertiseOverview: FC<ExpertiseOverviewProps> = ({ slice }) => {
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
     >
-      {/* ===== Centered Container ===== */}
+
       <div className="max-w-[1440px] mx-auto w-full">
-        {/* ===== Main Heading ===== */}
+
         <div className="text-center py-16">
           <PrismicRichText
             field={slice.primary.title}
@@ -29,9 +29,9 @@ const ExpertiseOverview: FC<ExpertiseOverviewProps> = ({ slice }) => {
           />
         </div>
 
-        {/* ===== Responsive 3-column Layout ===== */}
+
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-8 lg:gap-12 items-stretch px-6 lg:px-10">
-          {/* --- Left Column --- */}
+
           <div className="md:col-span-4 lg:col-span-4 flex flex-col justify-between h-full space-y-6">
             {slice.primary.services_left?.map((item, i) => (
               <div
@@ -53,7 +53,7 @@ const ExpertiseOverview: FC<ExpertiseOverviewProps> = ({ slice }) => {
             ))}
           </div>
 
-          {/* --- Center Image --- */}
+
           <div className="md:col-span-4 lg:col-span-3 flex items-center justify-center order-first md:order-none h-full">
             <PrismicNextImage
               field={slice.primary.center_image}
@@ -64,9 +64,9 @@ const ExpertiseOverview: FC<ExpertiseOverviewProps> = ({ slice }) => {
             />
           </div>
 
-          {/* --- Right Column --- */}
+
           <div className="md:col-span-4 lg:col-span-4 flex flex-col justify-between h-full space-y-8">
-            {/* Services */}
+
             {slice.primary.services_right?.map((item, i) => (
               <div
                 key={`right-${i}`}
@@ -86,12 +86,12 @@ const ExpertiseOverview: FC<ExpertiseOverviewProps> = ({ slice }) => {
               </div>
             ))}
 
-            {/* Description */}
+
             <div className="text-base text-[#445152] font-poppins leading-relaxed">
               <PrismicRichText field={slice.primary.description} />
             </div>
 
-            {/* CTA Button */}
+
             <div>
               <PrismicNextLink
                 field={slice.primary.primary_cta}
@@ -106,3 +106,4 @@ const ExpertiseOverview: FC<ExpertiseOverviewProps> = ({ slice }) => {
 };
 
 export default ExpertiseOverview;
+

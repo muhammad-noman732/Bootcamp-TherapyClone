@@ -25,8 +25,8 @@ function HeaderContent({ settings, color }: any) {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Determine effective text color
-  // If scrolled, text is black (on white bg). If not, use the prop color.
+
+
   const effectiveColor = isScrolled ? "black" : color;
   const hoverColorClass = "hover:text-[#F6784F]";
 
@@ -43,14 +43,14 @@ function HeaderContent({ settings, color }: any) {
     >
       <div
         className={clsx(`
-          max-w-[1440px] mx-auto 
-          flex items-center justify-between 
+          max-w-[1440px] mx-auto
+          flex items-center justify-between
           h-[54px]
-          px-4 sm:px-6 lg:px-[70px]      
+          px-4 sm:px-6 lg:px-[70px]
           transition-all duration-300
         `)}
       >
-        {/* LOGO */}
+
         <div className="flex items-center flex-shrink-0">
           {settings.data.logo && (
             <PrismicNextLink field={settings.data.logolink}>
@@ -71,7 +71,7 @@ function HeaderContent({ settings, color }: any) {
           )}
         </div>
 
-        {/* NAVIGATION DESKTOP */}
+
         <nav
           className={clsx(`
             hidden md:flex justify-center flex-1
@@ -116,7 +116,7 @@ function HeaderContent({ settings, color }: any) {
           </ul>
         </nav>
 
-        {/* CTA BUTTON */}
+
         <div
           className={clsx(`
             hidden md:flex items-center flex-shrink-0
@@ -129,8 +129,8 @@ function HeaderContent({ settings, color }: any) {
               field={settings.data.ctalink}
               className={clsx(
                 `
-                inline-flex items-center 
-                rounded-lg 
+                inline-flex items-center
+                rounded-lg
                 transition-colors duration-200
                 lg:px-5 lg:py-2 lg:text-[16px]
                 md:px-3 md:py-1 md:text-[13px]
@@ -161,7 +161,7 @@ function HeaderContent({ settings, color }: any) {
           )}
         </div>
 
-        {/* MOBILE MENU BUTTON */}
+
         <button
           onClick={() => setIsOpen(true)}
           className="md:hidden focus:outline-none"
@@ -176,7 +176,7 @@ function HeaderContent({ settings, color }: any) {
         </button>
       </div>
 
-      {/* MOBILE MENU */}
+
       {isOpen && (
         <div className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 md:hidden">
           <div className="absolute top-0 right-0 w-3/4 max-w-sm bg-white h-[500px] p-6 shadow-xl flex flex-col">
@@ -243,3 +243,4 @@ function HeaderContent({ settings, color }: any) {
 }
 
 export default HeaderContent;
+

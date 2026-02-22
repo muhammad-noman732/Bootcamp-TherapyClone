@@ -9,3 +9,4 @@ export async function Header({ color }: { color: string }) {
 }
 
 export default Header;
+

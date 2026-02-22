@@ -13,9 +13,9 @@ const FeatureListImage: FC<FeatureListImageProps> = ({ slice }) => {
       data-slice-variation={slice.variation}
       className="bg-[#1E3B3D] text-white w-full"
     >
-      {/* Content container */}
+
       <div className="max-w-[1440px] mx-auto px-[30px] py-16">
-        {/* DESCRIPTION ABOVE EVERYTHING */}
+
         <div className="mb-10">
           <PrismicRichText
             field={slice.primary.section_description}
@@ -29,11 +29,11 @@ const FeatureListImage: FC<FeatureListImageProps> = ({ slice }) => {
           />
         </div>
 
-        {/* MAIN CONTENT ROW (Heading + Bullets vs Image) */}
+
         <div className="flex flex-col lg:flex-row items-start justify-between gap-12 lg:gap-20">
-          {/* LEFT SIDE */}
+
           <div className="w-full lg:w-[60%] flex flex-col justify-between h-full">
-            {/* Heading */}
+
             <PrismicRichText
               field={slice.primary.section_heading}
               components={{
@@ -45,7 +45,7 @@ const FeatureListImage: FC<FeatureListImageProps> = ({ slice }) => {
               }}
             />
 
-            {/* Bullet List */}
+
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-5 mt-5 md:mt-12 lg:mt-23 gap-x-12">
               {slice.primary.items?.map((item, index) => (
                 <div key={index} className="flex items-start justify-start">
@@ -58,7 +58,7 @@ const FeatureListImage: FC<FeatureListImageProps> = ({ slice }) => {
             </div>
           </div>
 
-          {/* RIGHT SIDE IMAGE */}
+
           <div className="w-full lg:w-[40%] flex justify-center lg:justify-end items-start">
             <PrismicNextImage
               field={slice.primary.side_image}
@@ -73,3 +73,4 @@ const FeatureListImage: FC<FeatureListImageProps> = ({ slice }) => {
 };
 
 export default FeatureListImage;
+

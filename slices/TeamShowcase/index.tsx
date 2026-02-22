@@ -13,23 +13,23 @@ const TeamShowcase: FC<TeamShowcaseProps> = ({ slice }) => {
       data-slice-variation={slice.variation}
     >
       <div className="w-full max-w-[1440px] mx-auto">
-        {/* Overline */}
+
         {slice.primary.overline && (
           <p className="text-[#EEDE96] uppercase tracking-widest text-xl font-poppin font-normal mb-3">
             {slice.primary.overline}
           </p>
         )}
 
-        {/* Title */}
+
         <div className="text-3xl md:text-6xl py-6 font-sans text-white mb-5 uppercase tracking-wider font-normal">
           <PrismicRichText field={slice.primary.title} />
         </div>
 
-        {/* Grid */}
+
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 py-14">
           {slice.primary.members.map((item, index) => (
             <div key={index} className="group">
-              {/* IMAGE WITH HOVER EFFECT */}
+
               <div className="overflow-hidden rounded-md">
                 <PrismicNextImage
                   field={item.photo}
@@ -38,17 +38,8 @@ const TeamShowcase: FC<TeamShowcaseProps> = ({ slice }) => {
                 />
               </div>
 
-              {/* Optional name + role (if exists in Prismic) */}
-              {/* {item.name && (
-                <p className="mt-4 text-lg font-semibold text-[#1E3B3D]">
-                  {item.name}
-                </p>
-              )}
-              {item.role && (
-                <p className="text-[#445152] text-sm">
-                  {item.role}
-                </p>
-              )} */}
+
+
             </div>
           ))}
         </div>
@@ -58,3 +49,4 @@ const TeamShowcase: FC<TeamShowcaseProps> = ({ slice }) => {
 };
 
 export default TeamShowcase;
+

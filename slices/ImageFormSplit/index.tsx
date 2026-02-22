@@ -12,26 +12,26 @@ const ImageFormSplit: FC<ImageFormSplitProps> = ({ slice }) => {
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
       className="
-        relative flex 
+        relative flex
         bg-[linear-gradient(90deg,rgba(246,120,79,0)_0%,rgba(246,120,79,0.1)_13%,rgba(246,120,79,0.3)_25%,rgba(246,120,79,0.4)_38%,rgba(246,120,79,0.5)_50%,rgba(246,120,79,0.4)_63%,rgba(250,186,165,0.3)_75%,rgba(246,120,79,0.1)_88%,rgba(246,120,79,0)_100%)]
-        px-[30px] md:py-40
+        px-[30px] py-16 md:py-40
       "
     >
-      {/* ---------- Main Wrapper ---------- */}
+
       <div
         className="
-          relative flex flex-col lg:flex-row 
+          relative flex flex-col lg:flex-row
           w-full max-w-[1440px] mx-auto
         "
       >
-        {/* ---------- Left Side Image ---------- */}
+
         <div
           className="
-            relative w-full lg:w-[40%] 
-            flex justify-center lg:justify-start 
+            relative w-full lg:w-[40%]
+            flex justify-center lg:justify-start
           "
         >
-          <div className="relative w-full max-w-[700px] h-[765px]">
+          <div className="relative w-full max-w-[700px] h-[400px] sm:h-[500px] md:h-[600px] lg:h-[765px]">
             <PrismicNextImage
               field={slice.primary.side_image}
               className="w-full h-full object-cover "
@@ -40,27 +40,27 @@ const ImageFormSplit: FC<ImageFormSplitProps> = ({ slice }) => {
           </div>
         </div>
 
-        {/* ---------- Right Side Floating Form ---------- */}
+
 
         <div
           className="
-    w-full lg:w-auto 
-    flex justify-center 
+    w-full lg:w-auto
+    flex justify-center
     mt-10 lg:mt-0 z-10
     lg:absolute lg:left-[38%] lg:top-1/2 lg:-translate-y-1/2
   "
         >
-          {/* OUTER BORDER WITH GRADIENT */}
+
           <div
             className="
       bg-[linear-gradient(180deg,#F6784F_0%,#FFFFFF_100%)]
       p-[25px] sm:p-[30px]
       max-w-[780px] w-full
       shadow-lg rounded-sm
-      lg:h-[668px]      /* height only on large screens */
+      lg:h-[668px]
     "
           >
-            {/* INNER WHITE FORM */}
+
             <div className="bg-white w-full h-full py-6 px-6 lg:h-full">
               <form className="space-y-3 h-full flex flex-col justify-between">
                 <div className="flex flex-wrap -mx-2">
@@ -80,9 +80,8 @@ const ImageFormSplit: FC<ImageFormSplitProps> = ({ slice }) => {
                     return (
                       <div
                         key={index}
-                        className={`px-2 mb-4 ${
-                          isHalfWidth ? "w-full sm:w-1/2" : "w-full"
-                        }`}
+                        className={`px-2 mb-4 ${isHalfWidth ? "w-full sm:w-1/2" : "w-full"
+                          }`}
                       >
                         {type === "textarea" ? (
                           <textarea
@@ -104,12 +103,12 @@ const ImageFormSplit: FC<ImageFormSplitProps> = ({ slice }) => {
                   })}
                 </div>
 
-                {/* ---------- Submit Button ---------- */}
+
                 <button
                   type="submit"
                   className="
-            w-full bg-[#E7D07D] text-gray-900 
-            font-medium py-3 
+            w-full bg-[#E7D07D] text-gray-900
+            font-medium py-3
             hover:bg-[#d3bd6a] transition
           "
                 >
@@ -125,3 +124,4 @@ const ImageFormSplit: FC<ImageFormSplitProps> = ({ slice }) => {
 };
 
 export default ImageFormSplit;
+

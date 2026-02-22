@@ -2,14 +2,10 @@ import { FC } from "react";
 import { Content } from "@prismicio/client";
 import { SliceComponentProps } from "@prismicio/react";
 
-/**
- * Props for `MainText`.
- */
+
 export type MainTextProps = SliceComponentProps<Content.MainTextSlice>;
 
-/**
- * Component for "MainText" Slices.
- */
+
 const MainText: FC<MainTextProps> = ({ slice }) => {
   return (
     <section
@@ -25,3 +21,4 @@ const MainText: FC<MainTextProps> = ({ slice }) => {
 };
 
 export default MainText;
+

@@ -25,9 +25,9 @@ const AppointmentForm: FC<AppointmentFormProps> = ({ slice }) => {
       data-slice-variation={slice.variation}
       className="bg-linear-to-b from-[#1E3B3D] via-[#4E6263] to-[#FFFFFF] py-25 px-4 sm:px-8 md:px-16  lg:pr-0"
     >
-      {/*Center the whole content for very large screens */}
+
       <div className="max-w-[1440px] mx-auto">
-        {/* ---------- Header ---------- */}
+
         <header className="text-center mb-10">
           <h1 className="text-4xl md:text-5xl leading-tight uppercase font-sans font-normal text-white">
             {firstPart}{" "}
@@ -48,7 +48,7 @@ const AppointmentForm: FC<AppointmentFormProps> = ({ slice }) => {
           />
         </header>
 
-        {/* ---------- Form ---------- */}
+
         <div className="bg-white rounded-md max-w-[966px] w-full p-8 md:p-10 mx-auto">
           <form className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {groupedFields.map((row, rowIndex) => (
@@ -80,7 +80,7 @@ const AppointmentForm: FC<AppointmentFormProps> = ({ slice }) => {
               </div>
             ))}
 
-            {/* Submit Button */}
+
             <div className="md:col-span-2 mt-1">
               <button
                 type="submit"
@@ -97,3 +97,4 @@ const AppointmentForm: FC<AppointmentFormProps> = ({ slice }) => {
 };
 
 export default AppointmentForm;
+

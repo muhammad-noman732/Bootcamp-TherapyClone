@@ -14,23 +14,23 @@ const FeaturedArticle: FC<FeaturedArticleProps> = ({ slice }) => {
       className="bg-[linear-gradient(180deg,#EEDE96_0%,rgba(238,222,150,0)_100%)] py-35 pb-32"
     >
       <div className="relative max-w-[1440px] mx-auto">
-        {/* Main Image */}
+
         <PrismicNextImage
           field={slice.primary.main_image}
           className="w-full h-[380px] md:h-[430px] lg:h-[450px] object-cover px-[30px]"
           alt=""
         />
 
-        {/* Floating White Card */}
+
         <div
           className="
-            absolute left-1/2 -bottom-45 -translate-x-1/2 
+            absolute left-1/2 -bottom-45 -translate-x-1/2
             w-[88%] md:w-[85%] lg:w-[70%] xl:w-[60%]
             bg-white p-8
             flex flex-col items-center text-center
           "
         >
-          {/* Date + Category */}
+
           <div className="flex items-center justify-center gap-4 mb-4">
             <p className="font-poppin text-[#F6784F] text-sm md:text-base">
               {slice.primary.publish_date}
@@ -43,7 +43,7 @@ const FeaturedArticle: FC<FeaturedArticleProps> = ({ slice }) => {
             </p>
           </div>
 
-          {/* Title */}
+
           <PrismicRichText
             field={slice.primary.title}
             components={{
@@ -52,7 +52,7 @@ const FeaturedArticle: FC<FeaturedArticleProps> = ({ slice }) => {
                   className="
                     font-sans text-[#1E3B3D]
                     text-2xl sm:text-3xl md:text-4xl lg:text-[43px]
-                    max-w-[800px]   // prevents title from becoming too wide
+                    max-w-[800px]
                     mx-auto
                     leading-snug mb-4
                   "
@@ -63,15 +63,15 @@ const FeaturedArticle: FC<FeaturedArticleProps> = ({ slice }) => {
             }}
           />
 
-          {/* Summary */}
+
           <PrismicRichText
             field={slice.primary.summary}
             components={{
               paragraph: ({ children }) => (
                 <p
                   className="
-                    text-[#445152] font-poppin text-sm md:text-base leading-relaxed 
-                    max-w-[750px] mx-auto  // centered & narrower than title
+                    text-[#445152] font-poppin text-sm md:text-base leading-relaxed
+                    max-w-[750px] mx-auto
                   "
                 >
                   {children}
@@ -86,3 +86,4 @@ const FeaturedArticle: FC<FeaturedArticleProps> = ({ slice }) => {
 };
 
 export default FeaturedArticle;
+

@@ -19,7 +19,7 @@ const FeaturedArticleWithList: FC<FeaturedArticleWithListProps> = ({
       data-slice-variation={slice.variation}
     >
       <div className="w-full max-w-[1440px] mx-auto flex flex-col lg:flex-row lg:items-start gap-10 lg:gap-16 px-4 md:px-10 xl:px-16">
-        {/*  LEFT SECTION */}
+
         <div className="relative w-full lg:w-[55%] xl:w-[50%]">
           <PrismicNextImage
             field={featured?.image}
@@ -27,10 +27,10 @@ const FeaturedArticleWithList: FC<FeaturedArticleWithListProps> = ({
             alt=""
           />
 
-          {/* OVERLAY CARD */}
+
           <div
             className="
-              absolute 
+              absolute
               bg-[#EEDE96]
               shadow-md
               p-4 sm:p-6 lg:p-8
@@ -56,11 +56,11 @@ const FeaturedArticleWithList: FC<FeaturedArticleWithListProps> = ({
           </div>
         </div>
 
-        {/*  RIGHT SECTION */}
+
         <div className="space-y-10 w-full lg:w-[45%] xl:w-[50%] pt-16 lg:pt-0">
           {articles.map((item, index) => (
             <div key={index}>
-              {/*  CATEGORY + DATE */}
+
               <div className="flex items-center gap-3 text-sm mb-2 flex-wrap">
                 <span className="px-2 py-1 bg-[#EEDE96] text-[#1E3B3D] font-poppin text-lg sm:text-xl font-semibold">
                   {item.category}
@@ -71,12 +71,12 @@ const FeaturedArticleWithList: FC<FeaturedArticleWithListProps> = ({
                 </span>
               </div>
 
-              {/*  TITLE */}
+
               <h4 className="text-[#1E3B3D] font-poppin text-lg sm:text-2xl uppercase leading-snug hover:text-[#555] transition-colors">
                 <PrismicRichText field={item.description} />
               </h4>
 
-              {/*  HR WITH 20px TOP SPACE (mt-5) */}
+
               {index !== articles.length - 1 && (
                 <hr className="mt-5 border-t border-[#445152]" />
               )}
@@ -89,3 +89,4 @@ const FeaturedArticleWithList: FC<FeaturedArticleWithListProps> = ({
 };
 
 export default FeaturedArticleWithList;
+

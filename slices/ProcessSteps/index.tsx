@@ -12,7 +12,7 @@ const ProcessSteps: FC<ProcessStepsProps> = ({ slice }) => {
       className="py-20 md:mt-10 mt-25 px-[30px] bg-[linear-gradient(90deg,#EEDE96_0%,rgba(238,222,150,0.5)_25%,rgba(238,222,150,0)_50%,rgba(238,222,150,0.5)_75%,#EEDE96_100%)]"
     >
       <div className="max-w-[1440px] mx-auto text-center">
-        {/* ---------- Section Title ---------- */}
+
         <PrismicRichText
           field={slice.primary.section_title}
           components={{
@@ -24,7 +24,7 @@ const ProcessSteps: FC<ProcessStepsProps> = ({ slice }) => {
           }}
         />
 
-        {/* ---------- Steps Grid ---------- */}
+
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 justify-center">
           {slice.primary.steps.map((item, index) => {
             const isMiddleCard = index === 1;
@@ -35,17 +35,17 @@ const ProcessSteps: FC<ProcessStepsProps> = ({ slice }) => {
                   isMiddleCard ? "bg-[#EEDE96]" : "bg-white"
                 }`}
               >
-                {/* Step Number */}
+
                 <p className="text-[#F6784F] font-poppins text-sm uppercase mb-3">
                   {item.step_number}
                 </p>
 
-                {/* Step Title */}
+
                 <h3 className="text-[#1E3B3D] font-sans text-lg sm:text-xl md:text-2xl font-medium uppercase mb-3">
                   {item.step_title}
                 </h3>
 
-                {/* Step Description */}
+
                 <PrismicRichText
                   field={item.step_description}
                   components={{
@@ -66,3 +66,4 @@ const ProcessSteps: FC<ProcessStepsProps> = ({ slice }) => {
 };
 
 export default ProcessSteps;
+

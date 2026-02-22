@@ -18,11 +18,11 @@ const ApproachOverview: FC<ApproachOverviewProps> = ({ slice }) => {
       "
     >
       <div className="w-full max-w-7xl mx-auto ">
-        {/* Two Columns */}
+
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start">
-          {/* LEFT COLUMN */}
+
           <div className="order-2 lg:order-1 flex flex-col justify-start text-center lg:text-left">
-            {/* Top Section */}
+
             <div className="md:max-w-3xl mb-10 mx-auto lg:mx-0">
               <PrismicRichText
                 field={slice.primary.intro_title}
@@ -47,7 +47,7 @@ const ApproachOverview: FC<ApproachOverviewProps> = ({ slice }) => {
               />
             </div>
 
-            {/* White “What to Expect” Box */}
+
             <div className="bg-white p-5 rounded-md mt-7 h-auto">
               <PrismicRichText
                 field={slice.primary.subheading}
@@ -66,12 +66,12 @@ const ApproachOverview: FC<ApproachOverviewProps> = ({ slice }) => {
                     key={index}
                     className="flex flex-row pt-4 border-t border-[#C3C7C8] space-x-2 justify-center lg:justify-start"
                   >
-                    {/* Item Number */}
+
                     <p className="text-xl font-bold text-[#445152]">
                       {item.item_number}
                     </p>
 
-                    {/* Item Text */}
+
                     <PrismicRichText
                       field={item.item_text}
                       components={{
@@ -88,7 +88,7 @@ const ApproachOverview: FC<ApproachOverviewProps> = ({ slice }) => {
             </div>
           </div>
 
-          {/* RIGHT COLUMN (IMAGE) */}
+
           <div className="order-1 lg:order-2 flex items-center justify-center">
             <PrismicNextImage
               field={slice.primary.side_image}
@@ -103,3 +103,4 @@ const ApproachOverview: FC<ApproachOverviewProps> = ({ slice }) => {
 };
 
 export default ApproachOverview;
+

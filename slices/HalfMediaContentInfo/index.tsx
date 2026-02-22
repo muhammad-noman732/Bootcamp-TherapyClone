@@ -15,7 +15,7 @@ const HalfMediaContentInfo: FC<HalfMediaContentInfoProps> = ({ slice }) => {
     >
       <div className="w-full max-w-[1440px] px-[30px]">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-stretch">
-          {/* ---------- Left Image ---------- */}
+
           <div className="flex">
             <PrismicNextImage
               field={slice.primary.media}
@@ -24,10 +24,10 @@ const HalfMediaContentInfo: FC<HalfMediaContentInfoProps> = ({ slice }) => {
             />
           </div>
 
-          {/* ---------- Right Content ---------- */}
+
           <div className="flex flex-col justify-between h-[645px] space-y-6">
             <div className="space-y-6">
-              {/* Pretitle */}
+
               <PrismicRichText
                 field={slice.primary.pretitle}
                 components={{
@@ -39,7 +39,7 @@ const HalfMediaContentInfo: FC<HalfMediaContentInfoProps> = ({ slice }) => {
                 }}
               />
 
-              {/* Title + Subtitle */}
+
               <div className="text-[#1E3B3D] max-w-md">
                 <h1 className="font-sans text-5xl tracking-widest font-normal uppercase">
                   <PrismicRichText
@@ -61,7 +61,7 @@ const HalfMediaContentInfo: FC<HalfMediaContentInfoProps> = ({ slice }) => {
               </div>
             </div>
 
-            {/* ---------- Info Blocks ---------- */}
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:gap-30 gap-10">
               {slice.primary.info_blocks?.map((item, idx) => (
                 <div key={idx} className="space-y-2">
@@ -96,3 +96,4 @@ const HalfMediaContentInfo: FC<HalfMediaContentInfoProps> = ({ slice }) => {
 };
 
 export default HalfMediaContentInfo;
+

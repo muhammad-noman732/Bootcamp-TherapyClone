@@ -16,7 +16,7 @@ const CtaCentered: FC<CtaCenteredProps> = ({ slice }) => {
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
     >
-      {/*  Center Content */}
+
       <div className="max-w-4xl mx-auto text-center px-6">
         <div className="text-3xl md:text-5xl  tracking-wide font-sans font-normal leading-normal uppercase text-center">
           <PrismicRichText field={slice.primary.title} />
@@ -25,7 +25,7 @@ const CtaCentered: FC<CtaCenteredProps> = ({ slice }) => {
           <PrismicRichText field={slice.primary.description} />
         </div>
 
-        {/*  BUTTON — Poppins, background + border #F6784F */}
+
         {slice.primary.primary_button && (
           <PrismicNextLink
             field={slice.primary.primary_button}
@@ -51,3 +51,4 @@ const CtaCentered: FC<CtaCenteredProps> = ({ slice }) => {
 };
 
 export default CtaCentered;
+

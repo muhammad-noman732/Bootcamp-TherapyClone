@@ -2,14 +2,10 @@ import { FC } from "react";
 import { Content } from "@prismicio/client";
 import { SliceComponentProps, PrismicRichText } from "@prismicio/react";
 
-/**
- * Props for `InfoGrid`.
- */
+
 export type InfoGridProps = SliceComponentProps<Content.InfoGridSlice>;
 
-/**
- * Component for "InfoGrid" Slices.
- */
+
 const InfoGrid: FC<InfoGridProps> = ({ slice }) => {
   const items = slice.primary.items ?? [];
   const firstRow = items.slice(0, 3);
@@ -21,7 +17,7 @@ const InfoGrid: FC<InfoGridProps> = ({ slice }) => {
       data-slice-variation={slice.variation}
       className="py-10 px-6 md:px-16  bg-[linear-gradient(90deg,rgba(246,120,79,0)_0%,rgba(246,120,79,0.08)_12%,rgba(246,120,79,0.28)_25%,rgba(246,120,79,0.42)_38%,rgba(246,120,79,0.5)_50%,rgba(246,120,79,0.42)_63%,rgba(250,186,165,0.28)_75%,rgba(246,120,79,0.08)_88%,rgba(246,120,79,0)_100%)]"
     >
-      {/* Heading */}
+
       <div className="text-center mb-3">
         <PrismicRichText
           field={slice.primary.title}
@@ -35,7 +31,7 @@ const InfoGrid: FC<InfoGridProps> = ({ slice }) => {
         />
       </div>
 
-      {/* Subheading */}
+
       <div className="text-center mb-8">
         <PrismicRichText
           field={slice.primary.subheading}
@@ -49,9 +45,9 @@ const InfoGrid: FC<InfoGridProps> = ({ slice }) => {
         />
       </div>
 
-      {/* Info Grid */}
+
       <div className="mx-auto flex flex-col items-center gap-3">
-        {/* Top row */}
+
         {firstRow.length > 0 && (
           <div className="flex flex-wrap justify-center gap-6 md:gap-8 xl:gap-10 max-w-[1400px] mx-auto">
             {firstRow.map((item, index) => (
@@ -78,7 +74,7 @@ const InfoGrid: FC<InfoGridProps> = ({ slice }) => {
           </div>
         )}
 
-        {/* Bottom row */}
+
         {secondRow.length > 0 && (
           <div className="flex w-full flex-col items-center gap-6 md:flex-row md:justify-center md:gap-4">
             {secondRow.map((item, index) => (
@@ -110,3 +106,4 @@ const InfoGrid: FC<InfoGridProps> = ({ slice }) => {
 };
 
 export default InfoGrid;
+

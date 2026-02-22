@@ -3,14 +3,10 @@ import { Content } from "@prismicio/client";
 import { SliceComponentProps, PrismicRichText } from "@prismicio/react";
 import { PrismicNextImage } from "@prismicio/next";
 
-/**
- * Props for `IconList`.
- */
+
 export type IconListProps = SliceComponentProps<Content.IconListSlice>;
 
-/**
- * Component for "IconList" Slices.
- */
+
 const IconList: FC<IconListProps> = ({ slice }) => {
   return (
     <section
@@ -18,7 +14,7 @@ const IconList: FC<IconListProps> = ({ slice }) => {
       data-slice-variation={slice.variation}
       className="px-6 md:px-20 lg:px-30 py-12"
     >
-      {/* Heading */}
+
       <div className="max-w-3xl mx-auto mb-12 text-center">
         <PrismicRichText
           field={slice.primary.heading}
@@ -32,7 +28,7 @@ const IconList: FC<IconListProps> = ({ slice }) => {
         />
       </div>
 
-      {/* Icon List */}
+
       <div className="max-w-6xl mx-auto flex flex-wrap justify-center gap-6 sm:grid sm:grid-cols-3 lg:grid-cols-4 sm:gap-8">
         {slice.primary.items?.map((item, index) => (
           <div
@@ -67,3 +63,4 @@ const IconList: FC<IconListProps> = ({ slice }) => {
 };
 
 export default IconList;
+

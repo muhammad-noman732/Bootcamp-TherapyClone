@@ -13,9 +13,9 @@ const ImageTextColumns: FC<ImageTextColumnsProps> = ({ slice }) => {
       data-slice-variation={slice.variation}
       className="relative w-full flex justify-center py-10 sm:py-16 md:py-24 lg:py-28"
     >
-      {/* ---------- Container ---------- */}
+
       <div className="relative w-full max-w-[1440px]">
-        {/* ---------- Background Image with overlay ---------- */}
+
         <div className="relative">
           <PrismicNextImage
             field={slice.primary.main_image}
@@ -25,9 +25,9 @@ const ImageTextColumns: FC<ImageTextColumnsProps> = ({ slice }) => {
           <div className="absolute inset-0 bg-[#1E3B3D] opacity-50"></div>
         </div>
 
-        {/* ---------- Text + Button Container ---------- */}
+
         <div className="absolute inset-0 flex flex-col items-center justify-center px-4 sm:px-6 md:px-10 text-center">
-          {/* ---------- Heading ---------- */}
+
           <div className="py-3 sm:py-4">
             <PrismicRichText
               field={slice.primary.heading}
@@ -41,7 +41,7 @@ const ImageTextColumns: FC<ImageTextColumnsProps> = ({ slice }) => {
             />
           </div>
 
-          {/* ---------- Description ---------- */}
+
           <div className="max-w-[90%] md:max-w-[868px] py-2">
             <PrismicRichText
               field={slice.primary.description}
@@ -55,7 +55,7 @@ const ImageTextColumns: FC<ImageTextColumnsProps> = ({ slice }) => {
             />
           </div>
 
-          {/* ---------- Button ---------- */}
+
           <div className="py-4 sm:py-6">
             <PrismicNextLink
               field={slice.primary.button_link}
@@ -69,3 +69,4 @@ const ImageTextColumns: FC<ImageTextColumnsProps> = ({ slice }) => {
 };
 
 export default ImageTextColumns;
+

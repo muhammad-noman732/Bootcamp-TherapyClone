@@ -12,11 +12,11 @@ const CardGrid: FC<CardGridProps> = ({ slice }) => {
       data-slice-variation={slice.variation}
       className="w-full px-4 md:px-8 py-12"
     >
-      {/* Grid */}
+
       <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
         {slice.primary.cards.map((item, idx) => (
           <article key={idx} className="flex flex-col w-full">
-            {/* Image */}
+
             <div className="w-full h-56 overflow-hidden rounded-md">
               <PrismicNextImage
                 field={item.image}
@@ -25,7 +25,7 @@ const CardGrid: FC<CardGridProps> = ({ slice }) => {
               />
             </div>
 
-            {/* Category + Date */}
+
             <div className="flex items-center justify-between mt-3">
               <span className="text-sm font-medium bg-gray-100 text-gray-800 px-3 py-1 rounded-full">
                 {item.tag}
@@ -34,7 +34,7 @@ const CardGrid: FC<CardGridProps> = ({ slice }) => {
               <span className="text-sm text-gray-500">{item.date}</span>
             </div>
 
-            {/* Title */}
+
             <div className="mt-2">
               <PrismicRichText
                 field={item.title}
@@ -56,7 +56,7 @@ const CardGrid: FC<CardGridProps> = ({ slice }) => {
         ))}
       </div>
 
-      {/* Pagination */}
+
       <div className="flex flex-col items-center gap-4 mt-12">
         <p className="text-gray-600 text-sm">
           {slice.primary.current_page} / {slice.primary.total_pages}
@@ -74,3 +74,4 @@ const CardGrid: FC<CardGridProps> = ({ slice }) => {
 };
 
 export default CardGrid;
+

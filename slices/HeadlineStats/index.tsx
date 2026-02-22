@@ -19,9 +19,9 @@ const HeadlineStats: FC<HeadlineStatsProps> = ({ slice }) => {
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
     >
-      {/* ---------- Main Container ---------- */}
+
       <div className="max-w-[1440px] mx-auto w-full">
-        {/* Headline */}
+
         <div className="text-center md:text-left mb-10">
           <h1 className="font-sans font-semibold uppercase text-2xl sm:text-3xl md:text-5xl lg:text-6xl leading-tight">
             {firstPart}
@@ -34,21 +34,21 @@ const HeadlineStats: FC<HeadlineStatsProps> = ({ slice }) => {
           </h1>
         </div>
 
-        {/* Supporting text */}
+
         <div className="flex justify-end mb-6 md:mb-8">
           <div className="tracking-normal max-w-md text-sm sm:text-base font-poppin text-left leading-relaxed">
             <PrismicRichText field={slice.primary.supporting_text} />
           </div>
         </div>
 
-        {/* Subtext */}
+
         <div className="max-w-xl text-sm sm:text-base text-[#1E3B3D] uppercase font-sans mb-10">
           <PrismicRichText field={slice.primary.subtext} />
         </div>
 
-        {/* Image + Stats */}
+
         <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center">
-          {/* Left Image */}
+
           <div className="w-full">
             <PrismicNextImage
               field={slice.primary.main_image}
@@ -57,7 +57,7 @@ const HeadlineStats: FC<HeadlineStatsProps> = ({ slice }) => {
             />
           </div>
 
-          {/* Right Stats */}
+
           <div className="flex flex-col gap-10 sm:gap-12">
             {slice.primary.stats.map((item, index) => {
               const isRight = index % 2 === 0;
@@ -85,3 +85,4 @@ const HeadlineStats: FC<HeadlineStatsProps> = ({ slice }) => {
 };
 
 export default HeadlineStats;
+

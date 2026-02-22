@@ -2,14 +2,10 @@ import { FC } from "react";
 import { Content } from "@prismicio/client";
 import { PrismicRichText, SliceComponentProps } from "@prismicio/react";
 
-/**
- * Props for `PageHeader`.
- */
+
 export type PageHeaderProps = SliceComponentProps<Content.PageHeaderSlice>;
 
-/**
- * Component for "PageHeader" Slices.
- */
+
 const PageHeader: FC<PageHeaderProps> = ({ slice }) => {
   return (
     <section
@@ -34,3 +30,4 @@ const PageHeader: FC<PageHeaderProps> = ({ slice }) => {
 };
 
 export default PageHeader;
+

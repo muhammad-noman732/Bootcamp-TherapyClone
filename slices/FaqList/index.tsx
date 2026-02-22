@@ -10,7 +10,7 @@ export type FaqListProps = SliceComponentProps<Content.FaqListSlice>;
 const FaqList: FC<FaqListProps> = ({ slice }) => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
-  // Keep original toggle logic: only one open at a time
+
   const toggle = (i: number) => {
     setOpenIndex(openIndex === i ? null : i);
   };
@@ -21,9 +21,9 @@ const FaqList: FC<FaqListProps> = ({ slice }) => {
       data-slice-variation={slice.variation}
       className="py-16 px-6 sm:px-10 lg:px-20 xl:px-[150px] bg-white"
     >
-      {/* Gradient Wrapper */}
+
       <div className="bg-gradient-to-t from-[#EEDE96] to-white py-10 px-6 sm:px-10 rounded-lg shadow-md max-w-[1100px] mx-auto">
-        {/* Heading */}
+
         <header className="text-center mb-10">
           <PrismicRichText
             field={slice.primary.title}
@@ -44,7 +44,7 @@ const FaqList: FC<FaqListProps> = ({ slice }) => {
           />
         </header>
 
-        {/* FAQ List */}
+
         <div className="max-w-[900px] mx-auto space-y-5">
           {slice.primary.faqs.map((item, index) => {
             const isOpen = openIndex === index;
@@ -54,7 +54,7 @@ const FaqList: FC<FaqListProps> = ({ slice }) => {
                 key={index}
                 className="border border-[#DADADA] rounded-md bg-white shadow-sm transition-all duration-300"
               >
-                {/* Question */}
+
                 <button
                   onClick={() => toggle(index)}
                   className="w-full flex justify-between items-center py-4 px-6 text-left cursor-pointer"
@@ -68,7 +68,7 @@ const FaqList: FC<FaqListProps> = ({ slice }) => {
                     {item.question}
                   </span>
 
-                  {/* Expand Icon */}
+
                   <span
                     className={clsx(
                       "text-[#344E4F] text-base md:text-2xl font-normal transition-transform duration-200",
@@ -79,7 +79,7 @@ const FaqList: FC<FaqListProps> = ({ slice }) => {
                   </span>
                 </button>
 
-                {/* Answer */}
+
                 <div
                   className={clsx(
                     "overflow-hidden transition-all duration-300 border-t border-[#E0E0E0] bg-[#FCFCFC]",
@@ -117,3 +117,4 @@ const FaqList: FC<FaqListProps> = ({ slice }) => {
 };
 
 export default FaqList;
+

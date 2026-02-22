@@ -118,50 +118,51 @@ export default async function TwinglyPosts({
         ))}
       </div>
 
-    {/* Pagination */}
-<div className="flex justify-between items-center mt-12 w-full relative">
 
-  {/* LEFT: Previous or placeholder */}
-  <div className="w-[426.66px] h-[51.18px] flex items-center">
-    {page > 1 ? (
-      <Link
-        href={`?page=${page - 1}`}
-        className="bg-[#EEDE96] text-[#1E3B3D] text-base font-medium transition 
+      <div className="flex justify-between items-center mt-12 w-full relative">
+
+
+        <div className="w-[426.66px] h-[51.18px] flex items-center">
+          {page > 1 ? (
+            <Link
+              href={`?page=${page - 1}`}
+              className="bg-[#EEDE96] text-[#1E3B3D] text-base font-medium transition
         w-[426.66px] h-[51.18px] flex items-center justify-center"
-      >
-        Previous
-      </Link>
-    ) : (
-      // Empty placeholder
-      <div className="w-[426.66px] h-[51.18px]"></div>
-    )}
-  </div>
+            >
+              Previous
+            </Link>
+          ) : (
 
-  {/* CENTER: Page Indicator */}
-  <div className="absolute left-1/2 -translate-x-1/2">
-    <span className="text-[#445152] text-base font-poppin">
-      {page} / {totalPages || 1}
-    </span>
-  </div>
+            <div className="w-[426.66px] h-[51.18px]"></div>
+          )}
+        </div>
 
-  {/* RIGHT: Next or placeholder */}
-  <div className="w-[426.66px] h-[51.18px] flex items-center justify-end">
-    {page < totalPages ? (
-      <Link
-        href={`?page=${page + 1}`}
-        className="bg-[#EEDE96] text-[#1E3B3D] text-base font-medium transition 
+
+        <div className="absolute left-1/2 -translate-x-1/2">
+          <span className="text-[#445152] text-base font-poppin">
+            {page} / {totalPages || 1}
+          </span>
+        </div>
+
+
+        <div className="w-[426.66px] h-[51.18px] flex items-center justify-end">
+          {page < totalPages ? (
+            <Link
+              href={`?page=${page + 1}`}
+              className="bg-[#EEDE96] text-[#1E3B3D] text-base font-medium transition
         w-[426.66px] h-[51.18px] flex items-center justify-center"
-      >
-        Next →
-      </Link>
-    ) : (
-      // Empty placeholder
-      <div className="w-[426.66px] h-[51.18px]"></div>
-    )}
-  </div>
+            >
+              Next →
+            </Link>
+          ) : (
 
-</div>
+            <div className="w-[426.66px] h-[51.18px]"></div>
+          )}
+        </div>
+
+      </div>
 
     </section>
   );
 }
+

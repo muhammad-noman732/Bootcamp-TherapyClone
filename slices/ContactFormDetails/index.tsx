@@ -12,7 +12,7 @@ const ContactFormDetails: FC<ContactFormDetailsProps> = ({ slice }) => {
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
       className="
-        py-20 px-4 sm:px-6 lg:px-12 
+        py-20 px-4 sm:px-6 lg:px-12
         bg-[linear-gradient(90deg,rgba(246,120,79,0)_0%,rgba(246,120,79,0.1)_13%,rgba(246,120,79,0.3)_25%,rgba(246,120,79,0.4)_38%,rgba(246,120,79,0.5)_50%,rgba(246,120,79,0.4)_63%,rgba(250,186,165,0.3)_75%,rgba(246,120,79,0.1)_88%,rgba(246,120,79,0)_100%)]
       "
     >
@@ -26,9 +26,9 @@ const ContactFormDetails: FC<ContactFormDetailsProps> = ({ slice }) => {
           </div>
         </div>
 
-        {/* Main grid for Form (left) and Details (right) */}
+
         <div className="grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-16 lg:gap-24 max-w-[85rem] mx-auto">
-          {/* LEFT COLUMN: FORM CONTAINER */}
+
           <div className="relative">
             <div
               className="
@@ -36,7 +36,7 @@ const ContactFormDetails: FC<ContactFormDetailsProps> = ({ slice }) => {
                 p-[20px] md:p-[30px]  shadow-2xl
               "
             >
-              {/* INNER WHITE FORM */}
+
               <div className="bg-white w-full h-auto py-5 px-4">
                 <form className="space-y-2">
                   <div className="flex flex-wrap -mx-2">
@@ -80,11 +80,11 @@ const ContactFormDetails: FC<ContactFormDetailsProps> = ({ slice }) => {
                     })}
                   </div>
 
-                  {/* SUBMIT BUTTON */}
+
                   <button
                     type="submit"
                     className="
-                     bg-[#E7D07D] text-gray-900 
+                     bg-[#E7D07D] text-gray-900
                       font-medium py-2 px-4
                       hover:bg-[#d3bd6a] transition
                     "
@@ -96,12 +96,12 @@ const ContactFormDetails: FC<ContactFormDetailsProps> = ({ slice }) => {
             </div>
           </div>
 
-          {/* RIGHT COLUMN: DETAILS & FAQ */}
+
           <div className="flex flex-col space-y-20 ">
             <div className="p-0">
-              {/* HOURS + CONTACT GRID */}
+
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-12 gap-x-8 md:gap-x-18 mb-16">
-                {/* OPENING HOURS */}
+
                 <div className="space-y-4">
                   <PrismicRichText
                     field={slice.primary.opening_hours_title}
@@ -125,7 +125,7 @@ const ContactFormDetails: FC<ContactFormDetailsProps> = ({ slice }) => {
                   </div>
                 </div>
 
-                {/* CONTACT */}
+
                 <div className="space-y-3">
                   <PrismicRichText
                     field={slice.primary.contact_title}
@@ -158,7 +158,7 @@ const ContactFormDetails: FC<ContactFormDetailsProps> = ({ slice }) => {
                 </div>
               </div>
 
-              {/* ADDRESS */}
+
               <div className="space-y-3 mt-12 max-w-2xs">
                 <PrismicRichText
                   field={slice.primary.address_title}
@@ -183,7 +183,7 @@ const ContactFormDetails: FC<ContactFormDetailsProps> = ({ slice }) => {
               </div>
             </div>
 
-            {/* FAQ CALLOUT */}
+
             {slice.primary.show_faq_callout && (
               <div className="bg-faq-dark mt-2 py-8 text-white">
                 <PrismicRichText
@@ -214,3 +214,4 @@ const ContactFormDetails: FC<ContactFormDetailsProps> = ({ slice }) => {
 };
 
 export default ContactFormDetails;
+

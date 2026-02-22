@@ -13,7 +13,7 @@ const IntroFeaturedServices: FC<IntroFeaturedServicesProps> = ({ slice }) => {
       data-slice-variation={slice.variation}
       className="bg-[#1E3B3D] text-white relative overflow-hidden"
     >
-      {/* Decorative Background Image - Bottom Left */}
+
       {slice.primary.bgimage && (
         <div className="absolute bottom-0 left-0  h-[400px] opacity-20 pointer-events-none z-0">
           <PrismicNextImage
@@ -27,9 +27,9 @@ const IntroFeaturedServices: FC<IntroFeaturedServicesProps> = ({ slice }) => {
       )}
 
       <div className="max-w-[1440px] mx-auto px-6 relative z-10">
-        {/* --- Top Section: Image and Content --- */}
+
         <div className="grid md:grid-cols-2 md:items-stretch items-center mb-24">
-          {/* Left Image */}
+
           <div className="overflow-hidden md:h-full">
             <PrismicNextImage
               field={slice.primary.main_image}
@@ -38,7 +38,7 @@ const IntroFeaturedServices: FC<IntroFeaturedServicesProps> = ({ slice }) => {
             />
           </div>
 
-          {/* Right Content */}
+
           <div className="space-y-6 md:pl-16 pt-10 md:pt-0 md:h-full flex flex-col">
             <PrismicRichText
               field={slice.primary.heading}
@@ -62,7 +62,7 @@ const IntroFeaturedServices: FC<IntroFeaturedServicesProps> = ({ slice }) => {
               }}
             />
 
-            {/* Features List */}
+
             <ul className="grid grid-cols-2 gap-y-3 gap-x-8 text-sm text-[#f7e8c3] font-normal pt-4">
               {slice.primary.features.map((item, i) => (
                 <li key={i} className="flex items-center gap-3">
@@ -76,7 +76,7 @@ const IntroFeaturedServices: FC<IntroFeaturedServicesProps> = ({ slice }) => {
               ))}
             </ul>
 
-            {/* Button */}
+
             <div className="pt-8 mt-auto">
               <PrismicNextLink
                 field={slice.primary.primary_cta}
@@ -86,7 +86,7 @@ const IntroFeaturedServices: FC<IntroFeaturedServicesProps> = ({ slice }) => {
           </div>
         </div>
 
-        {/* --- Section Headline: Therapy Solutions --- */}
+
         <div className="text-center mb-16">
           <PrismicRichText
             field={slice.primary.section_headline}
@@ -100,7 +100,7 @@ const IntroFeaturedServices: FC<IntroFeaturedServicesProps> = ({ slice }) => {
           />
         </div>
 
-        {/* --- Services Grid --- */}
+
         <section className="flex justify-center items-center w-full py-6 mb-[130px]">
           <div className="max-w-4xl w-full px-6">
             <div className="grid md:grid-cols-2 gap-19 text-center justify-items-center">
@@ -146,3 +146,4 @@ const IntroFeaturedServices: FC<IntroFeaturedServicesProps> = ({ slice }) => {
 };
 
 export default IntroFeaturedServices;
+
